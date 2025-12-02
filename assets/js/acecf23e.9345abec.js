@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkambrosia_tutorial=globalThis.webpackChunkambrosia_tutorial||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog","authorsListPath":"/blog/authors"}')}}]);
