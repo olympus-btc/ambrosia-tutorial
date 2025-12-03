@@ -63,7 +63,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
@@ -76,10 +76,6 @@ const config = {
             href: 'https://github.com/olympus-btc/ambrosia-tutorial',
             label: 'GitHub',
             position: 'right',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'left',
           },
         ],
       },
