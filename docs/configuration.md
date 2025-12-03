@@ -57,4 +57,10 @@ Click **Finish** to complete the setup.
 
 ## Setup complete!
 
-Once completed, your Point of Sale system is fully configured and ready to start adding products, processing sales, and managing daily operations.
+After completing the setup wizard, you will be redirected to the login screen.
+Here, you must select the administrator user you just created and enter the 4-digit PIN associated with the account.
+	1.	Select your user from the list.
+	2.	Enter your 4-digit PIN in the PIN field.
+	3.	Click “Sign In” to access the system.
+
+Once authenticated, you will be taken to the Dashboard, the main control panel of your Point of Sale system.
