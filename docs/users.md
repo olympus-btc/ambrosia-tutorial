@@ -81,4 +81,6 @@ To remove a user from the system:
 3. Confirm the deletion when prompted
 4. The user will be immediately removed from the system
 
-**Warning**: Deleting a user is permanent. Make sure you really want to remove the user before confirming.
+:::danger
+Deleting a user is permanent. Make sure you really want to remove the user before confirming.
+:::
