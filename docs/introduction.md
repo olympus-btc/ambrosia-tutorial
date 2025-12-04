@@ -48,8 +48,8 @@ This tutorial is organized into several sections:
 2. **Configuration** - Setting up your business
 3. **Users Management** - Adding, editing or remove employees
 4. **Products Management** - Adding, editing or remove products
-5. **Basic Operations** - Processing payments and managing sales
-
+5. **Processing Sales** - Processing payments and managing sales
+6. **Wallet** - Monitor your Lightning Network node
 ## Ready to Begin?
 
 Let's dive in and get Ambrosia running on your system! The next section will walk you through the installation process step by step.
