@@ -4,72 +4,222 @@ sidebar_position: 2
 slug: /installation
 ---
 
-## Project Dependencies
-### NodeJS
+# Installation
 
-It is recommended to use nvm (Node Version Manager) to install Node.js and npm. This allows you to easily manage multiple versions of Node.js.
+Learn how to install Ambrosia Point of Sale on your system using Docker.
 
-:::note
-You can use the version manager of your preference as [ASDF](https://asdf-vm.com/) or [MISE](https://mise.jdx.dev/)
-:::
+## Overview
 
-```bash
-# Download and install nvm:
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+Ambrosia uses Docker to simplify the installation process and ensure all dependencies are properly configured. With Docker, you don't need to manually install Node.js, databases, or other dependencies - everything is packaged in containers that work consistently across different systems.
 
-# instead of restarting the shell
-. "$HOME/.nvm/nvm.sh"
+## Prerequisites
 
-# Download and install Node.js:
-nvm install 22
+Before installing Ambrosia, you need:
+- Docker installed on your system
+- Git installed to clone the repository
+- Terminal access (Command Prompt, Terminal, or PowerShell)
 
-# Verify the Node.js version:
-node -v # Should print "v22.18.0".
-nvm current # Should print "v22.18.0".
+## System Requirements
 
-# Verify npm version:
-npm -v # Should print "10.9.3".
-```
+### Minimum Requirements
+- **OS**: Linux (Ubuntu 20.04+, Debian 10+), macOS 10.15+, or Windows 10/11
+- **RAM**: 2GB minimum, 4GB recommended
+- **Disk Space**: 2GB free space
+- **Network**: Internet connection
 
-### Java Development Kit
-To install the Java Development Kit (JDK), we recommend using SDKMAN!, a tool for managing multiple versions of Software Development Kits.
+### Recommended for Production
+- **OS**: Linux server (Ubuntu 22.04 LTS recommended)
+- **RAM**: 4GB or more
+- **Disk Space**: 10GB+ for growth
+- **Network**: Stable internet connection, static IP recommended
 
-```bash
-# Download and install SDKMAN!
-curl -s "https://get.sdkman.io" | bash
+## Step 1: Install Docker
 
-# Load SDKMAN! in the current session and add it to your shell
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+Docker is the containerization platform that runs Ambrosia and all its dependencies.
 
-# Install Java 21
-sdk install java 21.0.8-tem
-```
+### For Linux (Debian)
 
-:::note
-Remember to add source `"$HOME/.sdkman/bin/sdkman-init.sh"` to your `~/.bashrc` or `~/.zshrc` file so that sdk is available in all future terminal sessions.
-:::
-
-
-## Full Installation (Ambrosia + phoenixd)
+Open your terminal and run the following commands:
 
 ```bash
-wget -q https://raw.githubusercontent.com/olympus-btc/Ambrosia-POS/master/scripts/install.sh
-chmod +x install.sh
-./install.sh
+# Update package list
+sudo apt update
+
+# Install Docker
+sudo apt install docker.io
+
+# Add your user to the docker group (allows running Docker without sudo)
+sudo usermod -aG docker $USER
+
+# Refresh your user session to apply group changes
+su - $USER
 ```
 
-The phoenixd installation script installs phoenixd automatically. The script downloads phoenixd v0.7.1, verifies the package integrity using GPG and checksums, installs it in `/usr/local/bin`, and optionally configures a systemd service for automatic startup.
-
-
-## Project Instalation (without systemd)
-```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/Ambrosia-POS/master/scripts/install.sh | bash
-```
-
-## Uninstallation 
-
-To uninstall Ambrosia POS and phoenixd, run the following script:
+### For Linux (Ubuntu)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/Ambrosia-POS/master/scripts/uninstall.sh | bash
+# Update package list
+sudo apt update
+
+# Install Docker with docker compose version 2
+
+sudo apt install docker-compose-v2
+
+# Add your user to the docker group (allows running Docker without sudo)
+sudo usermod -aG docker $USER
+
+# Refresh your user session to apply group changes
+su - $USER
 ```
+
+### For macOS
+
+1. Download Docker Desktop for Mac from [docker.com](https://www.docker.com/products/docker-desktop)
+2. Open the downloaded `.dmg` file
+3. Drag Docker to your Applications folder
+4. Launch Docker from Applications
+5. Follow the setup wizard
+6. Docker will start automatically
+
+### For Windows
+
+1. Download Docker Desktop for Windows from [docker.com](https://www.docker.com/products/docker-desktop)
+2. Run the installer
+3. Follow the installation wizard
+4. Restart your computer when prompted
+5. Launch Docker Desktop from the Start menu
+6. Wait for Docker to start (you'll see a green icon in the system tray)
+
+### Verify Docker Installation
+
+After installing Docker, verify it's working correctly:
+
+```bash
+docker --version
+```
+
+You should see output like:
+```
+Docker version 28.2.2, build 28.2.2-0ubuntu1
+```
+
+If you see the version number, Docker is installed correctly!
+
+## Step 2: Install Git (If Not Already Installed)
+
+Git is needed to download the Ambrosia source code from GitHub.
+
+### Check if Git is Installed
+
+```bash
+git --version
+```
+
+If you see a version number, Git is already installed. Skip to Step 3.
+
+### Install Git
+
+**For Linux (Ubuntu/Debian):**
+```bash
+sudo apt install git
+```
+
+**For macOS:**
+```bash
+brew install git
+```
+(Requires Homebrew. If you don't have Homebrew, download Git from [git-scm.com](https://git-scm.com))
+
+**For Windows:**
+Download and install from [git-scm.com](https://git-scm.com/download/win)
+
+## Step 3: Clone the Ambrosia Repository
+
+Now we'll download the Ambrosia source code from GitHub.
+
+### Navigate to Your Preferred Directory
+
+First, decide where you want to install Ambrosia. For example:
+
+```bash
+# Option 1: Install in your home directory
+cd ~
+
+# Option 2: Install in a specific projects folder
+cd ~/projects
+```
+
+### Clone the Repository
+
+Run the following commands to download Ambrosia:
+
+```bash
+# Clone the repository from GitHub
+git clone https://github.com/sip-21/ambrosia.git
+
+# Navigate into the project directory
+cd ambrosia
+
+# Fetch all branches from the repository
+git fetch origin use-multi-stage-docker-build
+
+# Switch to the Docker-enabled branch
+git checkout use-multi-stage-docker-build
+```
+
+### Verify the Files
+
+Check that you're in the correct directory with the project files:
+
+```bash
+ls
+```
+
+You should see files including:
+- `docker-compose.yml` (Docker configuration)
+- `README.md` (Project documentation)
+- Various folders like `server`, `client`, etc.
+
+## Step 4: Build the Project with Docker
+
+Now we'll use Docker Compose to build and start all the necessary services.
+
+### Understanding Docker Compose
+
+Docker Compose is a tool that manages multi-container Docker applications. Ambrosia uses several containers:
+- **Web application**: The main Ambrosia POS interface
+- **Bussiness Logic**: API connected to a database for storing your data
+- **Lightning node**: Phoenix daemon for Bitcoin payments
+
+The `docker-compose.yml` file defines all these services and how they work together.
+
+### Build and Start the Containers
+
+From the `ambrosia` directory, run:
+
+```bash
+docker-compose up -d
+```
+
+if you are on **Ubuntu** run:
+```bash
+docker compose up -d
+```
+
+**What this command does:**
+- `docker-compose up`: Starts all services defined in docker-compose.yml
+- `-d`: Runs in "detached" mode (in the background)
+
+**This process may take 3-5 minutes on first run**, especially on slower internet connections. Subsequent starts will be much faster.
+
+
+## Step 5: Access Ambrosia
+
+Congratulations! Ambrosia is now running on your system.
+
+### Open the Application
+
+1. Open your web browser (Chrome, Firefox, Safari, Edge, etc.)
+2. Navigate to: **http://localhost:3000**
+3. You should see the Ambrosia onboarding screen
+
