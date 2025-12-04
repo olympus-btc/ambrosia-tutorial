@@ -28,3 +28,124 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Color Palette */
+:root {
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #b9f8cf;
+  --green-300: #7bf1a8;
+  --green-400: #05df72;
+  --green-500: #00c951;
+  --green-600: #00a63e;
+  --green-700: #008236;
+  --green-800: #016630;
+  --green-900: #0d542b;
+  --green-950: #032e15;
+}
+
+/* navbar */
+
+[data-theme="dark"] .navbar__title {
+  color: var(--green-200) !important;
+}
+
+/* sidebar */
+
+[data-theme="dark"] .menu__link {
+  color: var(--green-400);
+}
+
+[data-theme="dark"] .menu__link:hover {
+  color: var(--green-300);
+  background-color: var(--green-950);
+}
+
+[data-theme="dark"] .menu__link--active {
+  color: var(--green-200);
+  background-color: var(--green-800);
+}
+
+/* breadcrumbs */
+
+[data-theme="dark"] .breadcrumbs__link {
+  color: var(--green-400);
+}
+
+[data-theme="dark"] .breadcrumbs__link:hover {
+  color: var(--green-300);
+}
+
+/* cards */
+
+[data-theme="dark"] .card {
+  border-color: var(--green-800);
+}
+
+/* admonitions */
+
+[data-theme="dark"] .alert--info {
+  background-color: var(--green-950);
+  color: var(--green-200);
+}
+
+/* links */
+
+[data-theme="dark"] .pagination-nav__link {
+  border-color: var(--green-800);
+  color: var(--green-400);
+}
+
+[data-theme="dark"] .pagination-nav__link:hover {
+  border-color: var(--green-600);
+  color: var(--green-400);
+}
+
+[data-theme="dark"] .hash-link {
+  color: var(--green-400);
+}
+
+/* table of contents */
+
+[data-theme="dark"] .table-of-contents__link {
+  color: var(--green-600);
+}
+
+[data-theme="dark"] .table-of-contents__link:hover {
+  color: var(--green-300);
+}
+
+[data-theme="dark"] .table-of-contents__link--active {
+  color: var(--green-200);
+}
+
+/* search */
+
+[data-theme="dark"] .search-box {
+  border-color: var(--green-700);
+}
+
+[data-theme="dark"] .search-box:focus {
+  border-color: var(--green-400);
+  box-shadow: 0 0 0 2px rgba(53, 202, 251, 0.2);
+}
+
+/* footer */
+
+[data-theme="dark"] .footer {
+  background: #242526;
+}
+
+[data-theme="dark"] .footer .footer__title,
+[data-theme="dark"] .footer .footer__item,
+[data-theme="dark"] .footer .footer__link-item {
+  color: var(--green-500) !important;
+}
+
+[data-theme="dark"] .footer .footer__link-item:hover {
+  color: var(--green-400) !important;
+}
+
+[data-theme="dark"] .footer .footer__copyright {
+  color: var(--green-400) !important;
+}

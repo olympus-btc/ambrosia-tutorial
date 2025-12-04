@@ -59,8 +59,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.jpg',
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
@@ -88,6 +87,30 @@ const config = {
               {
                 label: 'Introduction',
                 to: '/',
+              },
+              {
+                label: 'Installation',
+                to: '/installation',
+              },
+              {
+                label: 'Configuration',
+                to: '/configuration',
+              },
+              {
+                label: 'Users Management',
+                to: '/users',
+              },
+              {
+                label: 'Products Management',
+                to: '/products',
+              },
+              {
+                label: 'Processing Sales (Cart)',
+                to: '/cart',
+              },
+              {
+                label: 'Wallet',
+                to: '/wallet',
               },
             ],
           }
