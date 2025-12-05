@@ -37,7 +37,7 @@ Before installing Ambrosia, you need:
 
 Docker is the containerization platform that runs Ambrosia and all its dependencies.
 
-### For Linux (Debian)
+### For Linux (Ubuntu/Debian)
 
 Open your terminal and run the following commands:
 
@@ -46,27 +46,11 @@ Open your terminal and run the following commands:
 sudo apt update
 
 # Install Docker
-sudo apt install docker.io
+sudo apt install curl docker.io
 
 # Install Docker Compose
-sudo apt install docker-compose
-
-# Add your user to the docker group (allows running Docker without sudo)
-sudo usermod -aG docker $USER
-
-# Refresh your user session to apply group changes
-su - $USER
-```
-
-### For Linux (Ubuntu)
-
-```bash
-# Update package list
-sudo apt update
-
-# Install Docker with docker compose version 2
-
-sudo apt install docker-compose-v2
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
 # Add your user to the docker group (allows running Docker without sudo)
 sudo usermod -aG docker $USER
@@ -198,17 +182,11 @@ From the `ambrosia` directory, run:
 docker-compose up -d
 ```
 
-if you are on **Ubuntu** run:
-```bash
-docker compose up -d
-```
-
 **What this command does:**
 - `docker-compose up`: Starts all services defined in docker-compose.yml
 - `-d`: Runs in "detached" mode (in the background)
 
 **This process may take 3-5 minutes on first run**, especially on slower internet connections. Subsequent starts will be much faster.
-
 
 ## Step 5: Access Ambrosia
 

@@ -44,12 +44,12 @@ Don't worry if you're new to Lightning Network or Bitcoin - we'll guide you thro
 
 This tutorial is organized into several sections:
 
-1. **Installation** - Getting Ambrosia up and running
-2. **Configuration** - Setting up your business
-3. **Users Management** - Adding, editing or remove employees
-4. **Products Management** - Adding, editing or remove products
-5. **Processing Sales** - Processing payments and managing sales
-6. **Wallet** - Monitor your Lightning Network node
+1. **Install Ambrosia** -  Installation
+2. **Set Up Ambrosia** - Configuration
+3. **Make a Product** - Products Management
+4. **Sell Your Product** - Processing Sales
+5. **Other Features** - Wallet, Users Management, Orders, Settings
+
 ## Ready to Begin?
 
 Let's dive in and get Ambrosia running on your system! The next section will walk you through the installation process step by step.

@@ -1,6 +1,6 @@
 ---
 title: "Wallet"
-sidebar_position: 7
+sidebar_position: 1
 slug: /wallet
 ---
 
