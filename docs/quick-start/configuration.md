@@ -17,9 +17,6 @@ If at anytime the page freezes please hit Refresh on your browser
 ### Store
 - Recommended for: Retail shops, boutiques, hardware stores, electronics shops, Bitcoin merchandise stores
 
-### Restaurant
-- Recommended for: Restaurants, cafes, food trucks, bars, coffee shops
-
 ## Step 2: Create Your Admin Account
 
 This step creates the primary administrator account for your POS system. This account will have full access to all features and settings.
