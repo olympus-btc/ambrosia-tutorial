@@ -12,14 +12,7 @@ If at anytime the page freezes please hit Refresh on your browser
 
 ## Initial Setup (Onboarding)
 
-## Step 1: Select Your Business Type
-
-### Store
-- Recommended for: Retail shops, boutiques, hardware stores, electronics shops, Bitcoin merchandise stores
-
-:::info
-Restaurant is unavailable at the moment
-:::
+## Step 1: Select Store
 
 ## Step 2: Create Your Admin Account
 
@@ -41,7 +34,7 @@ Admin
 0000
 ```
 
-### Password
+### Wallet Password
 
 **Password Example**:
 ```

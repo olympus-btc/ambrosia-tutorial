@@ -159,7 +159,27 @@ docker exec phoenixd sh -c "\
 " && docker restart phoenixd
 ```
 
-# Step 7: Access Ambrosia
+# Step 7: Verify auto-liquidity settings in phoenix.conf
+
+```
+docker exec phoenixd cat /phoenix/.phoenix/phoenix.conf
+```
+
+You should see the following two lines at the bottom:
+```
+auto-liquidity=off
+max-mining-fee=5000
+```
+
+If you don’t see these values, it means auto-liquidity is still ON. In that case, Phoenixd will require you to open a channel with 25,000 sats, which will give you about 2M sats of inbound liquidity.
+If you want less liquidity (and therefore pay less to open the channel), return to Step 6: Configure phoenixd for inbound liquidity and adjust your settings.
+
+:::info
+These sats cover the mining fee to open a channel with ACINQ.
+They are not refundable.
+:::
+
+# Step 8: Access Ambrosia
 
 1. Open your web browser (Chrome, Firefox, Safari, Edge, etc.)
 2. Navigate to: **http://localhost:3000**
