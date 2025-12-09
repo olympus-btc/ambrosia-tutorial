@@ -19,29 +19,29 @@ Top-right button.
 
 **Product Name**
 ```
-Jade Hardware Wallet
+5 Sticker Pack
 ```
 
 **Description**
 ```
-Bitcoin hardware wallet
+Pack with 5 random stickers
 ```
 
 **Category**  
 Create a new category.
 
 ```
-Hardware Wallets
+Stickers
 ```
 
 **SKU**
 ```
-HW-JADE-01
+PK-STICK-05
 ```
 
-**Price (MXN)**
+**Price (USD)**
 ```
-2500
+1
 ```
 
 **Stock**
@@ -54,13 +54,3 @@ Upload a PNG/JPG image (square recommended).
 
 ### Step 3 — Click “Add”
 Product appears immediately in the list.
-
-## 3. Edit a Product
-1. In the product list → click **Edit (pencil)**  
-2. Change any field  
-3. Click **Save**
-
-Common quick edits:
-- Increase stock  
-- Change price  
-- Update description

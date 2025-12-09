@@ -6,6 +6,10 @@ slug: /quickconfiguration
 
 # Configuration
 
+:::warning
+If at anytime the page freezes please hit Refresh on your browser
+:::
+
 ## Initial Setup (Onboarding)
 
 ## Step 1: Select Your Business Type
@@ -55,13 +59,13 @@ This step collects important information about your business that will appear on
 ```
 Lightning Electronics
 ```
-
-#### Address
-#### Phone
-#### Email
-#### RFC (Tax ID)
-#### Currency
-#### Store Logo
+### Optional fields
+- Address
+- Phone
+- Email
+- RFC (Tax ID)
+- Currency
+- Store Logo
 
 ### Click the Finish button to complete the setup
 
@@ -85,29 +89,9 @@ After completing the setup wizard:
 
 3. **Sign In**
 
-## Step 3: Open a channel/Get inbound liquidity
-By default, phoenixd will request 2Msat of inbound liquidity from the ACINQ LSP, whenever it runs out of inbound liquidity. This of course includes when you first start the node and receive your very first payment. ACINQ charges 1% of the amount of inbound liquidity requested, which is 20ksat (plus the mining fee). Since 20ksat is about US$20 at the time of writing, and since we don't need this much inbound liquidity for a workshop, we instead configure phoenixd not to request inbound liquidity.
+## Step 4: Open a channel/Get inbound liquidity
 
-*(Note: if you actually want 2M sats of inbound liquidity, just omit this. If you go this route, you should send ~25ksats as your first payment, most of which will be taken by ACINQ for the fee)*:
-
-Edit the phoenixd config:
-```
-sudo nano "$(docker inspect -f '{{ range .Mounts }}{{ if eq .Destination "/phoenix" }}{{ .Source }}/.phoenix/phoenix.conf{{ end }}{{ end }}' phoenixd)"
-```
-Add these two lines to the config file (this should be fine as long as mining fees are lower than 5k):
-```
-auto-liquidity=off
-max-mining-fee=5000
-```
-
-Now save and exit (ctrl+s, ctrl+x).
-
-Restart your container to pick up the new settings:
-```
-docker restart phoenixd
-```
-
-Next, we deposit 5ksats into our node:
+Next, we deposit 5k sats into our node:
 
 - On the Dashboard, go to Wallet
 
