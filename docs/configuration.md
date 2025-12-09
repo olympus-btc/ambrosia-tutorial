@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-sidebar_position: 3
+sidebar_position: 4
 slug: /configuration
 ---
 
@@ -75,6 +75,7 @@ This step creates the primary administrator account for your POS system. This ac
 - Create a strong password for your admin account
 - This provides an additional layer of security
 - Used for accessing sensitive settings and features
+- Used to access your wallet
 
 **Password Requirements**:
 - Minimum 8 characters
