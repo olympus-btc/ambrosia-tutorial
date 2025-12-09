@@ -109,4 +109,8 @@ Next, we deposit 5k sats into our node:
 Channel open
 ```
 
+:::warning
+Make sure you create the invoice for 5000 sats to open the channel, otherwise payment could fail
+:::
+
 - Scan it with your lightning wallet and pay
