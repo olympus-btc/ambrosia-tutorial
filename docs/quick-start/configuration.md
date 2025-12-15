@@ -107,4 +107,4 @@ Channel open
 Make sure you create the invoice for 5000 sats to open the channel, otherwise payment could fail
 :::
 
-- Scan it with your lightning wallet and pay, you should see a confirmation on the screen
+- Scan it with your lightning wallet and pay, you should see a confirmation on the screen.
