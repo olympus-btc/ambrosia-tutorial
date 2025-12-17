@@ -92,10 +92,6 @@ const config = {
                 label: 'Quick Start',
                 to: '/quick-start',
               },
-              {
-                label: 'Other Features',
-                to: '/other-features',
-              },
             ],
           }
         ],
