@@ -48,7 +48,6 @@ This tutorial is organized into several sections:
 2. **Set Up Ambrosia** - Configuration
 3. **Make a Product** - Products Management
 4. **Sell Your Product** - Processing Sales
-5. **Other Features** - Wallet, Users Management, Orders, Settings
 
 ## Ready to Begin?
 
