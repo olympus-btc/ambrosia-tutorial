@@ -6,10 +6,6 @@ slug: /quickconfiguration
 
 # Configuration
 
-:::warning
-If at anytime the page freezes please hit Refresh on your browser
-:::
-
 ## Initial Setup (Onboarding)
 
 ## Step 1: Select Store
@@ -61,7 +57,7 @@ Lightning Electronics
 - Currency
 - Store Logo
 
-### Click Next, then click Finish to complete the setup
+### Click Next, verify store information, then click Finish to complete the setup
 
 Congratulations! You've successfully configured your Ambrosia Point of Sale system.
 
@@ -108,3 +104,8 @@ Make sure you create the invoice for 5000 sats to open the channel, otherwise pa
 :::
 
 - Scan it with your lightning wallet and pay, you should see a confirmation on the screen.
+
+:::info
+These sats cover the mining fee to open a channel with ACINQ.
+They are not refundable.
+:::
