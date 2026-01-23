@@ -89,8 +89,12 @@ const config = {
                 to: '/',
               },
               {
-                label: 'Quick Start',
-                to: '/quick-start',
+                label: 'Quick Start - Electron',
+                to: '/quick-start-electron',
+              },
+              {
+                label: 'Quick Start - Docker',
+                to: '/quick-start-docker',
               },
             ],
           }
