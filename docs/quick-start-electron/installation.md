@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 sidebar_position: 1
-slug: /quickinstallation
+slug: /quick-installation-electron
 ---
 
 # Installation
@@ -28,8 +28,10 @@ cd Downloads
 ```
 3. Install Ambrosia
 ```
-sudo dpkg -i <name of the file.deb>
+sudo apt install <name of the file.deb>
 ```
+4. Go to your apps and open AmbrosiaPoS
+
 
 ## For Linux (Fedora)
 
@@ -46,6 +48,8 @@ sudo dnf install <name of the file.rpm>
 :::info
 Fedora needs to install the `libxcrypt-compat` dependency, it will ask you for confirmation. Type `y` and hit `Enter`.
 :::
+
+4. Go to your apps and open AmbrosiaPoS
 
 ## For Arch-Linux (tar.gz)
 

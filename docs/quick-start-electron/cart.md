@@ -1,7 +1,7 @@
 ---
 title: "Processing Sales (Cart)"
 sidebar_position: 4
-slug: /quickcart
+slug: /quick-cart-electron
 ---
 
 # Processing Sales

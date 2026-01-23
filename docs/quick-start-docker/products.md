@@ -1,7 +1,7 @@
 ---
 title: "Product Management"
 sidebar_position: 3
-slug: /quickproducts
+slug: /quick-products-docker
 ---
 
 # Managing Products
