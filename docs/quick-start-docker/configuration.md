@@ -34,7 +34,7 @@ Admin
 
 **Password Example**:
 ```
-Ambrosia2025!
+Ambrosia2026!
 ```
 
 ## Step 3: Enter Your Business Details

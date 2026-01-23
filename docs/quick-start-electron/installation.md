@@ -28,7 +28,7 @@ cd Downloads
 ```
 3. Install Ambrosia
 ```
-sudo apt install <name of the file.deb>
+sudo dpkg -i <name of the file.deb>
 ```
 4. Go to your apps and open AmbrosiaPoS
 
