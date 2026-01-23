@@ -1,7 +1,7 @@
 ---
 title: "Configuration"
 sidebar_position: 2
-slug: /quickconfigurationdocker
+slug: /quick-configuration-docker
 ---
 
 # Configuration

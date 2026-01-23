@@ -1,7 +1,7 @@
 ---
 title: "Product Management"
 sidebar_position: 3
-slug: /quickproductselectron
+slug: /quick-products-electron
 ---
 
 # Managing Products

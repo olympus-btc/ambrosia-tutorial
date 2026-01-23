@@ -1,7 +1,7 @@
 ---
 title: "Configuration"
 sidebar_position: 2
-slug: /quickconfigurationelectron
+slug: /quick-configuration-electron
 ---
 
 # Configuration

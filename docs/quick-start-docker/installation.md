@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 sidebar_position: 1
-slug: /quickinstallationdocker
+slug: /quick-installation-docker
 ---
 
 # Installation
