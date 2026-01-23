@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Quick Start
+sidebar_position: 3
+title: Quick Start - Docker
 ---
 
 This section is organized as following:
