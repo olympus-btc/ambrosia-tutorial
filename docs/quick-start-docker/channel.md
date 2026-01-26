@@ -20,27 +20,51 @@ All funds will be sent to the on-chain Bitcoin address you provide.
 
 ## Step 1:  Open a terminal and ensure phoenixd is running
 
+### For Linux/MacOS
 Verify that the Phoenix container is up:
-
 ```bash
 docker ps
 ```
-You should see a container named `phoenixd`
+You should see a container named `phoenixd`.
+
+### For Windows
+Verify that the Phoenix container is up:
+```bash
+
+```
+You should see a container named `phoenixd`.
 
 ## Step 2: List your channels
 
+### For Linux/MacOS
 Run the Phoenix CLI inside the phoenixd container to list all channels:
 ```bash
 docker exec phoenixd phoenix-cli listchannels
 ```
 Copy the `channelId` of the channel you want to close.
 
+### For Windows
+Run the Phoenix CLI inside the phoenixd container to list all channels:
+```bash
+
+```
+Copy the `channelId` of the channel you want to close.
+
 ## Step 3: Close the channel
 
+### For Linux/MacOS
 Run the following command:
-
 ```bash
 docker exec phoenixd phoenix-cli closechannel \
+  --channelId=<CHANNEL_ID> \
+  --address=<BITCOIN_ADDRESS> \
+  --feerateSatByte=7
+```
+
+### For Windows
+Run the following command:
+```bash
+
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
   --feerateSatByte=7
