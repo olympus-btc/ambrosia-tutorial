@@ -9,3 +9,4 @@ This section is organized as following:
 2. **Configuration**
 3. **Product Management**
 4. **Processing Sales (Cart)**
+5. **Closing a channel**
