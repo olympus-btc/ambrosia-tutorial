@@ -18,6 +18,7 @@ By following this tutorial, you'll be able to:
 - Install and configure Ambrosia on your machine
 - Manage users and products
 - Process your first Lightning payment
+- Open and close a Lightning channel
 
 ## Requirements
 
@@ -46,8 +47,9 @@ This tutorial is organized into several sections:
 
 1. **Install Ambrosia** -  Installation
 2. **Set Up Ambrosia** - Configuration
-3. **Make a Product** - Products Management
-4. **Sell Your Product** - Processing Sales
+3. **Make a Product** - Product Management
+4. **Sell Your Product** - Processing Sales (Cart)
+5. **Close your Lightning channel** - Closing a channel
 
 ## Ready to Begin?
 
