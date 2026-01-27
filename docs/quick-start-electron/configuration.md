@@ -86,7 +86,7 @@ Next, we deposit 5k sats into our node:
 - On the Dashboard, go to Wallet
 
 :::warning
-If your wallet bugs out, just refresh the electron app  (Will be fixed very soon), just click View then Reload, or hit Ctrl + R on your keyboard
+If your wallet keeps asking for a password even after you have correctly entered it, it's a bug (Will be fixed soon), just refresh the electron app, click View then Reload, or hit Ctrl + R on your keyboard
 :::
 
 - Enter your password
