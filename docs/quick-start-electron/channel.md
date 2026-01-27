@@ -11,10 +11,13 @@ slug: /channel-close-electron
 - The `channel ID` you want to close
 - A valid `Bitcoin on-chain address`
 - A suitable `fee rate (in sat/vbyte)`
-- Ambrosia must be running
+
+:::info
+Ambrosia must be running in order to close the channel
+:::
 
 :::warning
-Closing a channel is **final** and **cannot be cancelled**.  
+Closing a channel is **final** and **cannot be cancelled**.
 All funds will be sent to the on-chain Bitcoin address you provide.
 :::
 
@@ -50,20 +53,22 @@ You should see `phoenix-cli`.
 ### For MacOS (Amd64)
 ```bash
 # Navigate to Ambrosia directory:
-cd 
+cd /Applications/AmbrosiaPoS.app/Contents/Resources/phoenixd/macos-x64
 # Verify the binary exists:
 ls | grep phoenix
 ```
 You should see `phoenix-cli`.
 
 ### For Windows
-```bash
-# Navigate to Ambrosia directory:
 
-# Verify the binary exists:
+:::warning
+Requires JRE21 and PowerShell
+:::
 
+Navigate to the Ambrosia directory:
+```ps
+cd C:\Users\[My-User]\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-arm64\bin\
 ```
-You should see `phoenix-cli`.
 
 ## Step 2: List your channels
 
@@ -76,8 +81,8 @@ Copy the `channelId` of the channel you want to close.
 
 ### For Windows
 Run the CLI to list all channels:
-```bash
-
+```ps
+.\phoenix-cli.bat listchannels
 ```
 Copy the `channelId` of the channel you want to close.
 
@@ -96,8 +101,8 @@ Run the following command:
 ### For Windows
 Run the following command:
 
-```bash
-
+```ps
+.\phoenix-cli.bat closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
   --feerateSatByte=7

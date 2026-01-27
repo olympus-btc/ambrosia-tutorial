@@ -11,7 +11,10 @@ slug: /channel-close-docker
 - The `channel ID` you want to close
 - A valid `Bitcoin on-chain address`
 - A suitable `fee rate (in sat/vbyte)`
-- Ambrosia containers must be running
+
+:::info
+Ambrosia must be running in order to close the channel
+:::
 
 :::warning
 Closing a channel is **final** and **cannot be cancelled**.  
@@ -27,13 +30,6 @@ docker ps
 ```
 You should see a container named `phoenixd`.
 
-### For Windows
-Verify that the Phoenix container is up:
-```bash
-
-```
-You should see a container named `phoenixd`.
-
 ## Step 2: List your channels
 
 ### For Linux/MacOS
@@ -44,9 +40,9 @@ docker exec phoenixd phoenix-cli listchannels
 Copy the `channelId` of the channel you want to close.
 
 ### For Windows
-Run the Phoenix CLI inside the phoenixd container to list all channels:
-```bash
-
+Open Docker Desktop and click on `Terminal` (bottom right corner):
+```ps
+docker exec phoenixd phoenix-cli listchannels
 ```
 Copy the `channelId` of the channel you want to close.
 
@@ -63,8 +59,8 @@ docker exec phoenixd phoenix-cli closechannel \
 
 ### For Windows
 Run the following command:
-```bash
-
+```ps
+docker exec phoenixd phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
   --feerateSatByte=7
