@@ -82,11 +82,17 @@ cd /opt/AmbrosiaPoS  # or your chosen location
 ./ambrosia-app
 ```
 
-## For macOS
+## For MacOS
 
 1. Open the downloaded `.dmg` file
-2. Drag Ambrosia to your Applications folder
-3. Launch Ambrosia from Applications
+2. Drag Ambrosia into the `Applications` folder
+3. Launch Ambrosia from `Applications`
+:::warning
+The first time you open it, MacOS will show a security warning because it’s not from the App Store
+:::
+4. Go to `System Settings` → `Privacy & Security` and click `Open Anyway`
+5. Launch the app again, click `Open Anyway` when prompted, and enter your MacOS `username` and `password`
+6. The app should now open normally now
 
 ## For Windows
 
