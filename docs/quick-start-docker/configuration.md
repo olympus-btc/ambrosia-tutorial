@@ -77,13 +77,17 @@ After completing the setup wizard:
 
 2. **Enter Your PIN**
 
-3. **Sign In**
+3. **Log In**
 
 ## Step 4: Open a channel/Get inbound liquidity
 
 Next, we deposit 5k sats into our node:
 
 - On the Dashboard, go to Wallet
+
+:::warning
+If your wallet keeps asking for a password even after you have correctly entered it, it's a bug (Will be fixed soon), just refresh the web page or hit Ctrl + R on your keyboard
+:::
 
 - Enter your password
 

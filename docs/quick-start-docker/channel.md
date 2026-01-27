@@ -6,6 +6,15 @@ slug: /channel-close-docker
 
 # Close a Lightning Channel
 
+:::warning
+Closing a channel is **final** and **cannot be cancelled**.  
+Only do this if you're closing your shop or you're doing a workshop.
+:::
+
+:::info
+Ambrosia must be running in order to close the channel.
+:::
+
 ## Prerequisites
 
 - The `channel ID` you want to close
@@ -13,11 +22,11 @@ slug: /channel-close-docker
 - A suitable `fee rate (in sat/vbyte)`
 
 :::info
-Ambrosia must be running in order to close the channel
+You can see current fee rates using a Bitcoin block explorer like https://mempool.space/
 :::
 
 :::warning
-Closing a channel is **final** and **cannot be cancelled**.  
+Fee rate is for the child's feerate, set a higher value for an effective parent+child fee rate.  
 All funds will be sent to the on-chain Bitcoin address you provide.
 :::
 
@@ -33,16 +42,16 @@ You should see a container named `phoenixd`.
 ## Step 2: List your channels
 
 ### For Linux/MacOS
-Run the Phoenix CLI inside the phoenixd container to list all channels:
+List all channels:
 ```bash
-docker exec phoenixd phoenix-cli listchannels
+docker exec -it phoenixd /phoenix/phoenix-cli getinfo
 ```
 Copy the `channelId` of the channel you want to close.
 
 ### For Windows
-Open Docker Desktop and click on `Terminal` (bottom right corner):
+Open Docker Desktop and click on `Terminal` (bottom right corner), then:
 ```ps
-docker exec phoenixd phoenix-cli listchannels
+docker exec phoenixd phoenix-cli getinfo
 ```
 Copy the `channelId` of the channel you want to close.
 
@@ -51,10 +60,10 @@ Copy the `channelId` of the channel you want to close.
 ### For Linux/MacOS
 Run the following command:
 ```bash
-docker exec phoenixd phoenix-cli closechannel \
+docker exec -it phoenixd /phoenix/phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=7
+  --feerateSatByte=<FEE_RATE>
 ```
 
 ### For Windows
@@ -63,7 +72,7 @@ Run the following command:
 docker exec phoenixd phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=7
+  --feerateSatByte=<FEE_RATE>
 ```
 
 ## Result
@@ -74,4 +83,4 @@ If successful, Phoenix returns the transaction ID of the closing transaction:
 758b3df67c62c9cd9ebbde1ff6eaadc1c51f94d5b1a3efb2548236b9a6f1c659
 ```
 
-You can track this transaction using a Bitcoin block explorer.
+You can track this transaction using a Bitcoin block explorer like https://mempool.space/
