@@ -77,7 +77,7 @@ After completing the setup wizard:
 
 2. **Enter Your PIN**
 
-3. **Sign In**
+3. **Log In**
 
 ## Step 4: Open a channel/Get inbound liquidity
 

@@ -75,14 +75,14 @@ cd C:\Users\[My-User]\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-
 ### For Linux/MacOS
 Run the CLI to list all channels:
 ```bash
-./phoenix-cli listchannels
+./phoenix-cli getinfo
 ```
 Copy the `channelId` of the channel you want to close.
 
 ### For Windows
 Run the CLI to list all channels:
 ```ps
-.\phoenix-cli.bat listchannels
+.\phoenix-cli.bat getinfo
 ```
 Copy the `channelId` of the channel you want to close.
 
@@ -95,7 +95,7 @@ Run the following command:
 ./phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=7
+  --feerateSatByte=5
 ```
 
 ### For Windows
@@ -105,7 +105,7 @@ Run the following command:
 .\phoenix-cli.bat closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=7
+  --feerateSatByte=5
 ```
 
 ## Result
