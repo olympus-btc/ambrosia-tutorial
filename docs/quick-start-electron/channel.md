@@ -22,7 +22,7 @@ Ambrosia must be running in order to close the channel.
 - A suitable `fee rate (in sat/vbyte)`
 
 :::info
-You can see current fee rates using a Bitcoin block explorer like https://mempool.space/.
+You can see current fee rates using a Bitcoin block explorer like https://mempool.space/
 :::
 
 :::warning
@@ -30,43 +30,27 @@ Fee rate is for the child's feerate, set a higher value for an effective parent+
 All funds will be sent to the on-chain Bitcoin address you provide.
 :::
 
-## Step 1: Open a terminal and navigate to the Phoenix CLI
+## Step 1: Open a terminal and run this:
 
 ### For Linux (Ubuntu/Debian)
 ```bash
-# Navigate to Ambrosia directory:
-cd /opt/AmbrosiaPoS/resources/phoenixd/linux-x64
-# Verify the binary exists:
-ls | grep phoenix
+export PATH="/opt/AmbrosiaPoS/resources/phoenixd/linux-x64:$PATH"
 ```
-You should see `phoenix-cli`.
 
 ### For Linux (Arm64)
 ```bash
-# Navigate to Ambrosia directory:
-cd /opt/AmbrosiaPoS/resources/phoenixd/linux-arm64
-# Verify the binary exists:
-ls | grep phoenix
+export PATH="/opt/AmbrosiaPoS/resources/phoenixd/linux-arm64:$PATH"
 ```
-You should see `phoenix-cli`.
 
 ### For MacOS (Arm64)
 ```bash
-# Navigate to Ambrosia directory:
-cd /Applications/AmbrosiaPoS.app/Contents/Resources/phoenixd/macos-arm64
-# Verify the binary exists:
-ls | grep phoenix
+export PATH="/Applications/AmbrosiaPoS.app/Contents/Resources/phoenixd/macos-arm64:$PATH"
 ```
-You should see `phoenix-cli`.
 
 ### For MacOS (Amd64)
 ```bash
-# Navigate to Ambrosia directory:
-cd /Applications/AmbrosiaPoS.app/Contents/Resources/phoenixd/macos-x64
-# Verify the binary exists:
-ls | grep phoenix
+export PATH="/Applications/AmbrosiaPoS.app/Contents/Resources/phoenixd/macos-x64:$PATH"
 ```
-You should see `phoenix-cli`.
 
 ### For Windows
 
@@ -74,9 +58,23 @@ You should see `phoenix-cli`.
 Requires JRE21 and PowerShell
 :::
 
-Navigate to the Ambrosia directory:
+#### Install JRE21:
+
+1. Go to https://adoptium.net/temurin/releases/?version=21 and download the Windows version
+2. Run the .exe file
+3. Follow the Installation wizard
+
+### For Windows (Arm64)
+
+Open the terminal and run:
 ```ps
-cd C:\Users\[My-User]\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-arm64\bin\
+$env:PATH = "C:\Users\My-User\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-arm64\bin;$env:PATH"
+```
+
+### For Windows (Amd64)
+Open the terminal and run:
+```ps
+$env:PATH = "C:\Users\My-User\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-x64\bin;$env:PATH"
 ```
 
 ## Step 2: List your channels
@@ -84,14 +82,14 @@ cd C:\Users\[My-User]\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-
 ### For Linux/MacOS
 Run the CLI to list all channels:
 ```bash
-./phoenix-cli getinfo
+phoenix-cli getinfo
 ```
 Copy the `channelId` of the channel you want to close.
 
 ### For Windows
 Run the CLI to list all channels:
 ```ps
-.\phoenix-cli.bat getinfo
+phoenix-cli getinfo
 ```
 Copy the `channelId` of the channel you want to close.
 
@@ -101,20 +99,20 @@ Copy the `channelId` of the channel you want to close.
 Run the following command:
 
 ```bash
-./phoenix-cli closechannel \
+phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=5
+  --feerateSatByte=<FEE_RATE>
 ```
 
 ### For Windows
 Run the following command:
 
 ```ps
-.\phoenix-cli.bat closechannel \
+phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=5
+  --feerateSatByte=<FEE_RATE>
 ```
 
 ## Result
@@ -125,4 +123,4 @@ If successful, Phoenix returns the transaction ID of the closing transaction:
 758b3df67c62c9cd9ebbde1ff6eaadc1c51f94d5b1a3efb2548236b9a6f1c659
 ```
 
-You can track this transaction using a Bitcoin block explorer like https://mempool.space/.
+You can track this transaction using a Bitcoin block explorer like https://mempool.space/

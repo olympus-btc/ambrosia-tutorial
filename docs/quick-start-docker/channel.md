@@ -22,7 +22,7 @@ Ambrosia must be running in order to close the channel.
 - A suitable `fee rate (in sat/vbyte)`
 
 :::info
-You can see current fee rates using a Bitcoin block explorer like https://mempool.space/.
+You can see current fee rates using a Bitcoin block explorer like https://mempool.space/
 :::
 
 :::warning
@@ -49,7 +49,7 @@ docker exec -it phoenixd /phoenix/phoenix-cli getinfo
 Copy the `channelId` of the channel you want to close.
 
 ### For Windows
-Open Docker Desktop and click on `Terminal` (bottom right corner):
+Open Docker Desktop and click on `Terminal` (bottom right corner), then:
 ```ps
 docker exec phoenixd phoenix-cli getinfo
 ```
@@ -63,7 +63,7 @@ Run the following command:
 docker exec -it phoenixd /phoenix/phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=5
+  --feerateSatByte=<FEE_RATE>
 ```
 
 ### For Windows
@@ -72,7 +72,7 @@ Run the following command:
 docker exec phoenixd phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=5
+  --feerateSatByte=<FEE_RATE>
 ```
 
 ## Result
@@ -83,4 +83,4 @@ If successful, Phoenix returns the transaction ID of the closing transaction:
 758b3df67c62c9cd9ebbde1ff6eaadc1c51f94d5b1a3efb2548236b9a6f1c659
 ```
 
-You can track this transaction using a Bitcoin block explorer like https://mempool.space/.
+You can track this transaction using a Bitcoin block explorer like https://mempool.space/
