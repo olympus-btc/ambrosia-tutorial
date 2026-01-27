@@ -85,6 +85,10 @@ Next, we deposit 5k sats into our node:
 
 - On the Dashboard, go to Wallet
 
+:::warning
+If your wallet bugs out, just refresh the electron app  (Will be fixed very soon), just click View then Reload, or hit Ctrl + R on your keyboard
+:::
+
 - Enter your password
 
 - Enter amount e.g.

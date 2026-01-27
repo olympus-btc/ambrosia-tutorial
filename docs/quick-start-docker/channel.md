@@ -33,9 +33,9 @@ You should see a container named `phoenixd`.
 ## Step 2: List your channels
 
 ### For Linux/MacOS
-Run the Phoenix CLI inside the phoenixd container to list all channels:
+List all channels:
 ```bash
-docker exec phoenixd phoenix-cli listchannels
+docker exec -it phoenixd /phoenix/phoenix-cli listchannels
 ```
 Copy the `channelId` of the channel you want to close.
 
@@ -51,7 +51,7 @@ Copy the `channelId` of the channel you want to close.
 ### For Linux/MacOS
 Run the following command:
 ```bash
-docker exec phoenixd phoenix-cli closechannel \
+docker exec -it phoenixd /phoenix/phoenix-cli closechannel \
   --channelId=<CHANNEL_ID> \
   --address=<BITCOIN_ADDRESS> \
   --feerateSatByte=7

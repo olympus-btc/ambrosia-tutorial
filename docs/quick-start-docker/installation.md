@@ -128,6 +128,19 @@ You should see files including:
 
 # Step 4: Build and Start the Containers
 
+:::info
+If you have a previous version of ambrosia in docker, you need to do this first:
+:::
+
+From the `ambrosia` directory, run:
+```bash
+docker-compose up --build -d
+```
+
+:::info
+If this is a fresh installation, you can skip the previous step.
+:::
+
 From the `ambrosia` directory, run:
 
 ```bash

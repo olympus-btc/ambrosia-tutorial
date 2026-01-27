@@ -85,6 +85,10 @@ Next, we deposit 5k sats into our node:
 
 - On the Dashboard, go to Wallet
 
+:::warning
+If your wallet bugs out, just refresh the web page (Will be fixed very soon)
+:::
+
 - Enter your password
 
 - Enter amount e.g.
