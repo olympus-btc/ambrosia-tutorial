@@ -84,3 +84,7 @@ If successful, Phoenix returns the transaction ID of the closing transaction:
 ```
 
 You can track this transaction using a Bitcoin block explorer like https://mempool.space/
+
+:::info
+The channel status will display as 'Negotiating' even after a succesful closure, this is a phoenixd bug, the channel should be closed after 6 confirmations and sats won't be available since they were sent to an on chain address.
+:::

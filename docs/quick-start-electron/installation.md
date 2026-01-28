@@ -14,7 +14,7 @@ slug: /quick-installation-electron
 
 # Step 1: Download Ambrosia Build for your Operating System
 
-1. Go here: https://github.com/olympus-btc/ambrosia/releases/tag/v0.5.0-alpha
+1. Go here: https://github.com/olympus-btc/ambrosia/releases/tag/v0.5.1-alpha
 2. Scroll down and look for your OS and architecture version, click to download
 
 # Step 2: Install Ambrosia on your Operating System
