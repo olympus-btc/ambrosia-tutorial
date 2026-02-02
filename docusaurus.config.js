@@ -16,8 +16,8 @@ const config = {
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
-  url: 'https://olympus-btc.github.io',
-  baseUrl: '/ambrosia-tutorial/',
+  url: 'https://tutorial.ambrosiapay.com/',
+  baseUrl: '/',
   organizationName: 'olympus-btc',
   projectName: 'ambrosia-tutorial',
   onBrokenLinks: 'throw',
