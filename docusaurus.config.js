@@ -21,6 +21,7 @@ const config = {
   organizationName: 'olympus-btc',
   projectName: 'ambrosia-tutorial',
   onBrokenLinks: 'throw',
+  trailingSlash: true,
 
   i18n: {
     defaultLocale: 'en',
