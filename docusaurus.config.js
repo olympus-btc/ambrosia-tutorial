@@ -73,6 +73,10 @@ const config = {
         },
         items: [
           {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/olympus-btc/ambrosia-tutorial',
             label: 'GitHub',
             position: 'right',

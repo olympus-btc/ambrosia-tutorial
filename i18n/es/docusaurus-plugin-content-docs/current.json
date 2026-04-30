@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Quick Start - Desktop App": {
+    "message": "Inicio Rápido - App de Escritorio",
+    "description": "The label for category 'Quick Start - Desktop App' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Quick Start - Docker": {
+    "message": "Inicio Rápido - Docker",
+    "description": "The label for category 'Quick Start - Docker' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Quick Start - Script (Native)": {
+    "message": "Inicio Rápido - Script (Nativo)",
+    "description": "The label for category 'Quick Start - Script (Native)' in sidebar 'tutorialSidebar'"
+  }
+}
