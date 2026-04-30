@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Quick Start - Electron
+title: Quick Start - Desktop App
 ---
 
 This section is organized as following:

@@ -1,7 +1,7 @@
 ---
 title: "Product Management"
 sidebar_position: 3
-slug: /quick-products-electron
+slug: /quick-products-desktop-app
 ---
 
 # Managing Products
