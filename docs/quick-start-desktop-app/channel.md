@@ -1,7 +1,7 @@
 ---
 title: "Closing a channel"
 sidebar_position: 5
-slug: /channel-close-electron
+slug: /channel-close-desktop-app
 ---
 
 # Close a Lightning Channel

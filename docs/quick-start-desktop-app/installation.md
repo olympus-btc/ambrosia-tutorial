@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 sidebar_position: 1
-slug: /quick-installation-electron
+slug: /quick-installation-desktop-app
 ---
 
 # Installation

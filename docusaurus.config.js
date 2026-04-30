@@ -90,8 +90,8 @@ const config = {
                 to: '/',
               },
               {
-                label: 'Quick Start - Electron',
-                to: '/quick-start-electron',
+                label: 'Quick Start - Desktop App',
+                to: '/quick-start-desktop-app',
               },
               {
                 label: 'Quick Start - Docker',
