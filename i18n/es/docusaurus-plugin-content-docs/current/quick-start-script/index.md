@@ -8,5 +8,5 @@ Esta sección está organizada de la siguiente manera:
 1. **Instalación**
 2. **Configuración**
 3. **Gestión de Productos**
-4. **Procesamiento de Ventas (Carrito)**
+4. **Venta**
 5. **Cierre de canal**

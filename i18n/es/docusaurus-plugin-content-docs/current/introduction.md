@@ -48,7 +48,7 @@ Este tutorial está organizado en varias secciones:
 1. **Instalar Ambrosia** — Instalación
 2. **Configurar Ambrosia** — Configuración
 3. **Crear un Producto** — Gestión de Productos
-4. **Vender tu Producto** — Procesamiento de Ventas (Carrito)
+4. **Vender tu Producto** — Venta
 5. **Cerrar tu canal Lightning** — Cierre de canal
 
 ## ¿Listo para Comenzar?

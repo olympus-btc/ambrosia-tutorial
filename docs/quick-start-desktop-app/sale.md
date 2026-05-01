@@ -1,13 +1,13 @@
 ---
-title: "Processing Sales (Cart)"
+title: "Sale"
 sidebar_position: 4
-slug: /quick-cart-script
+slug: /quick-sale-desktop-app
 ---
 
-# Processing Sales
+# Sale
 
-## 1. Open the Cart
-- Dashboard → **Cart**
+## 1. Start a Sale
+- Dashboard → **Sale**
 - Left: Products  
 - Right: Order Summary + Payment
 
@@ -42,4 +42,4 @@ Choose from dropdown:
 2. Click **Pay**  
 3. Customer scans the QR invoice  
 4. Once paid, click **Payment Received**  
-5. Success → Cart clears
+5. Success → Sale completed

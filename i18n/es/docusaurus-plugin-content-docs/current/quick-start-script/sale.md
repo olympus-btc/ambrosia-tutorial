@@ -1,13 +1,13 @@
 ---
-title: "Procesamiento de Ventas (Carrito)"
+title: "Venta"
 sidebar_position: 4
-slug: /quick-cart-docker
+slug: /quick-sale-script
 ---
 
-# Procesamiento de Ventas
+# Venta
 
-## 1. Abre el Carrito
-- Dashboard → **Carrito**
+## 1. Inicia una Venta
+- Dashboard → **Venta**
 - Izquierda: Productos
 - Derecha: Resumen del Pedido + Pago
 
@@ -42,4 +42,4 @@ Elige del menú desplegable:
 2. Haz clic en **Pagar**
 3. El cliente escanea el código QR de la factura
 4. Una vez pagado, haz clic en **Pago Recibido**
-5. Éxito → El carrito se vacía
+5. Éxito → Venta completada
