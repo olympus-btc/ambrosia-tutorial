@@ -1,7 +1,7 @@
 ---
 title: "Instalación"
 sidebar_position: 1
-slug: /quick-installation-script
+slug: /quick-installation-native
 ---
 
 # Guía de Instalación - Ambrosia (Nativo/Script)

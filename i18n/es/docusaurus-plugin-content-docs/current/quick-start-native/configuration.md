@@ -1,7 +1,7 @@
 ---
 title: "Configuración"
 sidebar_position: 2
-slug: /quick-configuration-script
+slug: /quick-configuration-native
 ---
 
 # Configuración

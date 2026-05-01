@@ -1,7 +1,7 @@
 ---
 title: "Cierre de canal"
 sidebar_position: 5
-slug: /channel-close-script
+slug: /channel-close-native
 ---
 
 # Cerrar un Canal Lightning

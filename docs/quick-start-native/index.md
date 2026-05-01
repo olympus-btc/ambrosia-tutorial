@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Quick Start - Script (Native)
+title: Quick Start - Native
 ---
 
 This section is organized as following:

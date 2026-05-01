@@ -1,7 +1,7 @@
 ---
 title: "Product Management"
 sidebar_position: 3
-slug: /quick-products-script
+slug: /quick-products-native
 ---
 
 # Managing Products

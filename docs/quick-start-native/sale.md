@@ -1,7 +1,7 @@
 ---
 title: "Sale"
 sidebar_position: 4
-slug: /quick-sale-script
+slug: /quick-sale-native
 ---
 
 # Sale

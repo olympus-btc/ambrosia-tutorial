@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Inicio Rápido - Script (Nativo)
+title: Inicio Rápido - Nativo
 ---
 
 Esta sección está organizada de la siguiente manera:

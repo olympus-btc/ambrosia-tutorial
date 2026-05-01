@@ -1,7 +1,7 @@
 ---
 title: "Gestión de Productos"
 sidebar_position: 3
-slug: /quick-products-script
+slug: /quick-products-native
 ---
 
 # Gestión de Productos

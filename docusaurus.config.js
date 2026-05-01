@@ -101,6 +101,10 @@ const config = {
                 label: 'Quick Start - Docker',
                 to: '/quick-start-docker',
               },
+              {
+                label: 'Quick Start - Native',
+                to: '/quick-start-native',
+              },
             ],
           }
         ],

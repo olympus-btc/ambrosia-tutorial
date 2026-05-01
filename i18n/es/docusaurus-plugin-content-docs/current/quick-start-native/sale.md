@@ -1,7 +1,7 @@
 ---
 title: "Venta"
 sidebar_position: 4
-slug: /quick-sale-script
+slug: /quick-sale-native
 ---
 
 # Venta
