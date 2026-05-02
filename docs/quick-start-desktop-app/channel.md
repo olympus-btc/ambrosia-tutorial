@@ -7,7 +7,7 @@ slug: /channel-close-desktop-app
 # Close a Lightning Channel
 
 :::warning
-Closing a channel is **final** and **cannot be cancelled**.  
+Closing a channel is **final** and **cannot be cancelled**.
 Only do this if you're closing your shop or you're doing a workshop.
 :::
 
@@ -15,116 +15,43 @@ Only do this if you're closing your shop or you're doing a workshop.
 Ambrosia must be running in order to close the channel.
 :::
 
-## Prerequisites
+## Step 1: Go to Wallet
 
-- The `channel ID` you want to close
-- A valid `Bitcoin on-chain address`
-- A suitable `fee rate (in sat/vbyte)`
+From the Dashboard, go to **Wallet** and enter your wallet password.
+
+Under **Lightning Channels**, find your channel and click **Close Channel**.
+
+## Step 2: Enter the details
+
+A **Close Lightning Channel** dialog will appear:
+
+- **Bitcoin Address** — enter the on-chain Bitcoin address where funds will be sent
+- **Fee Rate (sat/byte)** — set the fee rate
 
 :::info
-You can see current fee rates using a Bitcoin block explorer like https://mempool.space/
+You can check current fee rates at https://mempool.space/
 :::
+
+Click **Review**.
+
+## Step 3: Confirm
+
+Review the summary:
+
+- Channel balance
+- Withdrawal address
+- Fee rate
 
 :::warning
-Fee rate is for the child's feerate, set a higher value for an effective parent+child fee rate.  
-All funds will be sent to the on-chain Bitcoin address you provide.
+**This action is irreversible.** Closing the channel will send all funds to the on-chain address you provided. This process may take time to confirm on the Bitcoin network.
 :::
 
-## Step 1: Open a terminal and run this:
-
-### For Linux (Ubuntu/Debian)
-```bash
-export PATH="/opt/AmbrosiaPoS/resources/phoenixd/linux-x64:$PATH"
-```
-
-### For Linux (Arm64)
-```bash
-export PATH="/opt/AmbrosiaPoS/resources/phoenixd/linux-arm64:$PATH"
-```
-
-### For MacOS (Arm64)
-```bash
-export PATH="/Applications/AmbrosiaPoS.app/Contents/Resources/phoenixd/macos-arm64:$PATH"
-```
-
-### For MacOS (Amd64)
-```bash
-export PATH="/Applications/AmbrosiaPoS.app/Contents/Resources/phoenixd/macos-x64:$PATH"
-```
-
-### For Windows
-
-:::warning
-Requires JRE21 and PowerShell
-:::
-
-#### Install JRE21:
-
-1. Go to https://adoptium.net/temurin/releases/?version=21 and download the Windows version
-2. Run the .exe file
-3. Follow the Installation wizard
-
-### For Windows (Arm64)
-
-Open the terminal and run:
-```ps
-$env:PATH = "C:\Users\My-User\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-arm64\bin;$env:PATH"
-```
-
-### For Windows (Amd64)
-Open the terminal and run:
-```ps
-$env:PATH = "C:\Users\My-User\AppData\Local\Programs\AmbrosiaPoS\resources\phoenixd\win-x64\bin;$env:PATH"
-```
-
-## Step 2: List your channels
-
-### For Linux/MacOS
-Run the CLI to list all channels:
-```bash
-phoenix-cli getinfo
-```
-Copy the `channelId` of the channel you want to close.
-
-### For Windows
-Run the CLI to list all channels:
-```ps
-phoenix-cli getinfo
-```
-Copy the `channelId` of the channel you want to close.
-
-## Step 3: Close the channel
-
-### For Linux/MacOS
-Run the following command:
-
-```bash
-phoenix-cli closechannel \
-  --channelId=<CHANNEL_ID> \
-  --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=<FEE_RATE>
-```
-
-### For Windows
-Run the following command:
-
-```ps
-phoenix-cli closechannel \
-  --channelId=<CHANNEL_ID> \
-  --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=<FEE_RATE>
-```
+Click **Confirm Close**.
 
 ## Result
 
-If successful, Phoenix returns the transaction ID of the closing transaction:
-
-```text
-758b3df67c62c9cd9ebbde1ff6eaadc1c51f94d5b1a3efb2548236b9a6f1c659
-```
-
-You can track this transaction using a Bitcoin block explorer like https://mempool.space/
+A success dialog shows **"Channel close initiated"** with a Transaction ID. You can copy it with **Copy TX ID** and track it on a Bitcoin block explorer like https://mempool.space/
 
 :::info
-The channel status will display as 'Negotiating' even after a succesful closure, this is a phoenixd bug, the channel should be closed after 6 confirmations and sats won't be available since they were sent to an on chain address.
+The channel status will show as **"Closing — finalizing closing transaction"**. The channel will be fully closed after 6 confirmations and the funds will be available at the on-chain address you provided.
 :::
