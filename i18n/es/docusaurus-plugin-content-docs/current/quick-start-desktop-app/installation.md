@@ -14,7 +14,7 @@ slug: /quick-installation-desktop-app
 
 # Paso 1: Descarga Ambrosia para tu Sistema Operativo
 
-1. Ve aquí: https://github.com/olympus-btc/ambrosia/releases/tag/v0.5.1-alpha
+1. Ve aquí: https://github.com/olympus-btc/ambrosia/releases/latest
 2. Desplázate hacia abajo y busca tu SO y arquitectura, haz clic para descargar
 
 # Paso 2: Instala Ambrosia en tu Sistema Operativo

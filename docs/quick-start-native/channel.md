@@ -7,7 +7,7 @@ slug: /channel-close-native
 # Close a Lightning Channel
 
 :::warning
-Closing a channel is **final** and **cannot be cancelled**.  
+Closing a channel is **final** and **cannot be cancelled**.
 Only do this if you're closing your shop or you're doing a workshop.
 :::
 
@@ -15,60 +15,43 @@ Only do this if you're closing your shop or you're doing a workshop.
 Ambrosia must be running in order to close the channel.
 :::
 
-## Prerequisites
+## Step 1: Go to Wallet
 
-- The `channel ID` you want to close
-- A valid `Bitcoin on-chain address`
-- A suitable `fee rate (in sat/vbyte)`
+From the Dashboard, go to **Wallet** and enter your wallet password.
+
+Under **Lightning Channels**, find your channel and click **Close Channel**.
+
+## Step 2: Enter the details
+
+A **Close Lightning Channel** dialog will appear:
+
+- **Bitcoin Address** — enter the on-chain Bitcoin address where funds will be sent
+- **Fee Rate (sat/byte)** — set the fee rate
 
 :::info
-You can see current fee rates using a Bitcoin block explorer like https://mempool.space/
+You can check current fee rates at https://mempool.space/
 :::
+
+Click **Review**.
+
+## Step 3: Confirm
+
+Review the summary:
+
+- Channel balance
+- Withdrawal address
+- Fee rate
 
 :::warning
-Fee rate is for the child's feerate, set a higher value for an effective parent+child fee rate.  
-All funds will be sent to the on-chain Bitcoin address you provide.
+**This action is irreversible.** Closing the channel will send all funds to the on-chain address you provided. This process may take time to confirm on the Bitcoin network.
 :::
 
-## Step 1: Ensure phoenixd is running
-
-Verify that `phoenixd` is running. If you installed it as a systemd service, you can check its status:
-
-```bash
-systemctl status phoenixd
-```
-
-## Step 2: List your channels
-
-List all channels using `phoenix-cli`:
-
-```bash
-phoenix-cli getinfo
-```
-
-Copy the `channelId` of the channel you want to close.
-
-## Step 3: Close the channel
-
-Run the following command:
-
-```bash
-phoenix-cli closechannel \
-  --channelId=<CHANNEL_ID> \
-  --address=<BITCOIN_ADDRESS> \
-  --feerateSatByte=<FEE_RATE>
-```
+Click **Confirm Close**.
 
 ## Result
 
-If successful, Phoenix returns the transaction ID of the closing transaction:
-
-```text
-758b3df67c62c9cd9ebbde1ff6eaadc1c51f94d5b1a3efb2548236b9a6f1c659
-```
-
-You can track this transaction using a Bitcoin block explorer like https://mempool.space/
+A success dialog shows **"Channel close initiated"** with a Transaction ID. You can copy it with **Copy TX ID** and track it on a Bitcoin block explorer like https://mempool.space/
 
 :::info
-The channel status will display as 'Negotiating' even after a successful closure, this is a phoenixd bug, the channel should be closed after 6 confirmations and sats won't be available since they were sent to an on chain address.
+The channel status will show as **"Closing — finalizing closing transaction"**. The channel will be fully closed after 6 confirmations and the funds will be available at the on-chain address you provided.
 :::
