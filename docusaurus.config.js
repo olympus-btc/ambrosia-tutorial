@@ -105,6 +105,10 @@ const config = {
                 label: 'Quick Start - Native',
                 to: '/quick-start-native',
               },
+              {
+                label: 'Quick Start - Hardware',
+                to: '/quick-start-hardware',
+              },
             ],
           }
         ],
