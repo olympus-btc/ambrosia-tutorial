@@ -8,7 +8,11 @@ slug: /quick-configuration-desktop-app
 
 ## Initial Setup (Onboarding)
 
+When you first open the Ambrosia Desktop App, you will be greeted by the onboarding wizard. This process will guide you through creating your first store and administrator account.
+
 ## Step 1: Select Store
+
+On the first screen, you will need to initialize your workspace. If this is your first time, you will create a new store profile that will hold all your products, sales data, and configurations.
 
 ## Step 2: Create Your Admin Account
 
@@ -16,7 +20,11 @@ This step creates the primary administrator account for your POS system. This ac
 
 ### Required Fields
 
+Please provide the following credentials. **Keep these safe**, as they are required to manage your store.
+
 ### User Name
+
+The display name for your administrator account.
 
 **User Name Example**:
 ```
@@ -80,6 +88,10 @@ After completing the setup wizard:
 3. **Log In**
 
 ## Step 4: Open a channel/Get inbound liquidity
+
+:::warning Back up your recovery phrase first
+Before depositing any funds, make sure you have securely backed up your wallet recovery phrase (seed). Your seed is the only way to recover your funds if your device is lost, reset, or damaged. Write it down, store it offline somewhere safe, and never share it with anyone.
+:::
 
 Next, we deposit 5k sats into our node:
 

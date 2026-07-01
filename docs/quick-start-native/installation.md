@@ -4,7 +4,7 @@ sidebar_position: 1
 slug: /quick-installation-native
 ---
 
-# Installation Guide - Ambrosia (Native/Script)
+# Installation
 
 ## 1. Prerequisites Check
 
@@ -27,12 +27,12 @@ The installation script requires **sudo** privileges to install binaries to `/us
 
 *Automatic installation (includes systemd services):*
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/install.sh | bash -s -- --yes
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/install.sh | bash -s -- --yes
 ```
 
 *Automatic installation (without systemd services):*
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/install.sh | bash -s -- --yes --no-service
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/install.sh | bash -s -- --yes --no-service
 ```
 
 **Alternative methods:**
@@ -42,7 +42,7 @@ If you prefer to review the script before running it, or if you want an **intera
 *Download the script and make it executable:*
 
 ```bash
-wget -q https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/install.sh
+wget -q https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/install.sh
 chmod +x install.sh
 ```
 
@@ -81,5 +81,5 @@ Check [Mastering Phoenixd](https://btcgdl.github.io/Mastering-phoenixd/) for mor
 To uninstall Ambrosia POS and Phoenixd, run the following script:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/uninstall.sh | bash
 ```

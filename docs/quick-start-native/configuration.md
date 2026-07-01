@@ -89,6 +89,10 @@ After completing the setup wizard:
 
 ## Step 4: Open a channel/Get inbound liquidity
 
+:::warning Back up your recovery phrase first
+Before depositing any funds, make sure you have securely backed up your wallet recovery phrase (seed). Your seed is the only way to recover your funds if your device is lost, reset, or damaged. Write it down, store it offline somewhere safe, and never share it with anyone.
+:::
+
 Next, we deposit 5k sats into our node:
 
 - On the Dashboard, go to Wallet

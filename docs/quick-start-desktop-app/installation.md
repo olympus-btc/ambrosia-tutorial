@@ -14,7 +14,7 @@ slug: /quick-installation-desktop-app
 
 # Step 1: Download Ambrosia Build for your Operating System
 
-1. Go here: https://github.com/olympus-btc/ambrosia/releases/latest
+1. Go here: https://github.com/olympus-btc/ambrosia/releases/tag/v0.7.1-beta
 2. Scroll down and look for your OS and architecture version, click to download
 
 # Step 2: Install Ambrosia on your Operating System
@@ -38,7 +38,7 @@ sudo dpkg -i <name of the file.deb>
 1. Open the terminal
 2. Navigate to your Downloads folder
 ```
-cd Downlodas
+cd Downloads
 ```
 3. Install Ambrosia
 ```
@@ -55,7 +55,7 @@ Fedora needs to install the `libxcrypt-compat` dependency, it will ask you for c
 
 This tar.gz archive is provided for advanced users on Linux distributions that don't support `.deb` or `.rpm` packages (e.g., Arch Linux, Gentoo, etc.).
 
-> **Security Note:** This is a Bitcoin Lightning payment application. Do **NOT** run with `--no-sandbox`. The tar.gz format maintains proper sandboxing without the AppImage limitations.
+> **Security Note:** This is a Bitcoin Lightning payment application. Do **NOT** run with `--no-sandbox`. The tar.gz format maintains proper sandboxing.
 
 ### 1. Extract the archive
 
@@ -92,7 +92,7 @@ The first time you open it, MacOS will show a security warning because it’s no
 :::
 4. Go to `System Settings` → `Privacy & Security` and click `Open Anyway`
 5. Launch the app again, click `Open Anyway` when prompted, and enter your MacOS `username` and `password`
-6. The app should now open normally now
+6. The app should now open normally
 
 ## For Windows
 
@@ -103,7 +103,3 @@ The first time you open it, MacOS will show a security warning because it’s no
 5. Wait until the loading bar is done
 6. Make sure Run AmbrosiaPos is selected
 7. Click Finish to run AmbrosiaPoS
-
-:::warning
-You may need to turn off your VPN if page is not loading
-:::

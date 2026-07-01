@@ -4,7 +4,7 @@ sidebar_position: 1
 slug: /quick-installation-native
 ---
 
-# Guía de Instalación - Ambrosia (Nativo/Script)
+# Instalación
 
 ## 1. Verificación de Requisitos Previos
 
@@ -27,12 +27,12 @@ El script de instalación requiere privilegios **sudo** para instalar binarios e
 
 *Instalación automática (incluye servicios systemd):*
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/install.sh | bash -s -- --yes
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/install.sh | bash -s -- --yes
 ```
 
 *Instalación automática (sin servicios systemd):*
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/install.sh | bash -s -- --yes --no-service
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/install.sh | bash -s -- --yes --no-service
 ```
 
 **Métodos alternativos:**
@@ -42,7 +42,7 @@ Si prefieres revisar el script antes de ejecutarlo, o si quieres una **instalaci
 *Descarga el script y hazlo ejecutable:*
 
 ```bash
-wget -q https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/install.sh
+wget -q https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/install.sh
 chmod +x install.sh
 ```
 
@@ -81,5 +81,5 @@ Consulta [Mastering Phoenixd](https://btcgdl.github.io/Mastering-phoenixd/) para
 Para desinstalar Ambrosia POS y Phoenixd, ejecuta el siguiente script:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/heads/main/scripts/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.7.1-beta/scripts/uninstall.sh | bash
 ```

@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Quick Start - Native
 ---
 
-This section is organized as following:
+This section is organized as follows:
 
 1. **Installation**
 2. **Configuration**

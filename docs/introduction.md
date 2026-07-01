@@ -6,7 +6,7 @@ slug: /
 
 # Ambrosia Tutorial
 
-A tutorial for installing Ambrosia (Point of Sale), configure and use it.
+A tutorial to install, configure, and use Ambrosia (Point of Sale).
 
 ## What is Ambrosia?
 
@@ -45,7 +45,7 @@ Don't worry if you're new to Lightning Network or Bitcoin - we'll guide you thro
 
 This tutorial is organized into several sections:
 
-1. **Install Ambrosia** -  Installation
+1. **Install Ambrosia** - Installation
 2. **Set Up Ambrosia** - Configuration
 3. **Make a Product** - Product Management
 4. **Sell Your Product** - Sale

@@ -14,7 +14,7 @@ slug: /quick-installation-desktop-app
 
 # Paso 1: Descarga Ambrosia para tu Sistema Operativo
 
-1. Ve aquí: https://github.com/olympus-btc/ambrosia/releases/latest
+1. Ve aquí: https://github.com/olympus-btc/ambrosia/releases/tag/v0.7.1-beta
 2. Desplázate hacia abajo y busca tu SO y arquitectura, haz clic para descargar
 
 # Paso 2: Instala Ambrosia en tu Sistema Operativo
@@ -55,7 +55,7 @@ Fedora necesita instalar la dependencia `libxcrypt-compat`, te pedirá confirmac
 
 Este archivo tar.gz está disponible para usuarios avanzados en distribuciones Linux que no soportan paquetes `.deb` o `.rpm` (p.ej., Arch Linux, Gentoo, etc.).
 
-> **Nota de Seguridad:** Esta es una aplicación de pagos Bitcoin Lightning. **NO** la ejecutes con `--no-sandbox`. El formato tar.gz mantiene el aislamiento adecuado sin las limitaciones de AppImage.
+> **Nota de Seguridad:** Esta es una aplicación de pagos Bitcoin Lightning. **NO** la ejecutes con `--no-sandbox`. El formato tar.gz mantiene el aislamiento adecuado.
 
 ### 1. Extrae el archivo
 
@@ -103,7 +103,3 @@ La primera vez que lo abras, MacOS mostrará una advertencia de seguridad porque
 5. Espera a que la barra de progreso termine
 6. Asegúrate de que Ejecutar AmbrosiaPoS esté seleccionado
 7. Haz clic en Finalizar para ejecutar AmbrosiaPoS
-
-:::warning
-Es posible que debas desactivar tu VPN si la página no carga
-:::

@@ -8,7 +8,11 @@ slug: /quick-configuration-docker
 
 ## Configuración Inicial (Onboarding)
 
+Cuando abres Ambrosia en tu navegador por primera vez, serás recibido por el asistente de onboarding. Este proceso te guiará para crear tu primera tienda y cuenta de administrador.
+
 ## Paso 1: Seleccionar Tienda
+
+En la primera pantalla, deberás inicializar tu espacio de trabajo. Si es tu primera vez, crearás un nuevo perfil de tienda que contendrá todos tus productos, datos de ventas y configuraciones.
 
 ## Paso 2: Crear tu Cuenta de Administrador
 
@@ -16,7 +20,11 @@ Este paso crea la cuenta de administrador principal para tu sistema PoS. Esta cu
 
 ### Campos Requeridos
 
+Por favor proporciona las siguientes credenciales. **Guárdalas en un lugar seguro**, ya que son necesarias para gestionar tu tienda.
+
 ### Nombre de Usuario
+
+El nombre de pantalla para tu cuenta de administrador.
 
 **Ejemplo de Nombre de Usuario**:
 ```
