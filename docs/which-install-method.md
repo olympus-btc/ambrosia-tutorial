@@ -14,8 +14,10 @@ Ambrosia can be installed in three different ways. They all lead to the same Poi
 | **Docker** | Running the full stack in containers | Docker and Git | Good for a server or a machine you keep always on. |
 | **Native (Script)** | Advanced Linux users who want full control | A terminal (`curl`/`bash`), optionally systemd | Installs the components directly on your system. Linux-focused. |
 
-:::tip Not sure?
+:::tip 
+
 Start with the **Desktop App** — it's the quickest way to try Ambrosia without using the terminal.
+
 :::
 
 ## Next step
