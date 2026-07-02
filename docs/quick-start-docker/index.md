@@ -3,7 +3,7 @@ sidebar_position: 3
 title: Quick Start - Docker
 ---
 
-This section is organized as following:
+This section is organized as follows:
 
 1. **Installation**
 2. **Configuration**

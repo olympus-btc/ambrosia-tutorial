@@ -89,6 +89,10 @@ Después de completar el asistente de configuración:
 
 ## Paso 4: Abrir un canal / Obtener liquidez entrante
 
+:::warning Respalda tu frase de recuperación primero
+Antes de depositar fondos, asegúrate de haber respaldado de forma segura la frase de recuperación (seed) de tu billetera. Tu seed es la única forma de recuperar tus fondos si pierdes, reinicias o dañas tu dispositivo. Anótala, guárdala offline en un lugar seguro y nunca la compartas con nadie.
+:::
+
 A continuación, depositamos 5k sats en nuestro nodo:
 
 - En el Dashboard, ve a Billetera

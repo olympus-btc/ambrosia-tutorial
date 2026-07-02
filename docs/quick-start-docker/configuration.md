@@ -8,7 +8,11 @@ slug: /quick-configuration-docker
 
 ## Initial Setup (Onboarding)
 
+When you first open Ambrosia in your browser, you will be greeted by the onboarding wizard. This process will guide you through creating your first store and administrator account.
+
 ## Step 1: Select Store
+
+On the first screen, you will need to initialize your workspace. If this is your first time, you will create a new store profile that will hold all your products, sales data, and configurations.
 
 ## Step 2: Create Your Admin Account
 
@@ -16,7 +20,11 @@ This step creates the primary administrator account for your POS system. This ac
 
 ### Required Fields
 
+Please provide the following credentials. **Keep these safe**, as they are required to manage your store.
+
 ### User Name
+
+The display name for your administrator account.
 
 **User Name Example**:
 ```
