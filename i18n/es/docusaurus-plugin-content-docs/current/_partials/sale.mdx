@@ -1,39 +1,69 @@
 # Venta
 
 ## 1. Inicia una Venta
+
 - Dashboard → **Venta**
-- Izquierda: Productos
-- Derecha: Resumen del Pedido + Pago
+- Izquierda: tus productos
+- Derecha: el **Resumen** del pedido y el pago
+
+En un teléfono, toca **Cobrar** para abrir el resumen.
 
 ## 2. Agrega Productos
 
-Haz clic en **Agregar** en cualquier tarjeta de producto.
+Haz clic en **Agregar** en cualquier tarjeta de producto. Si el producto tiene variantes, se abre la ventana **Seleccionar variante**: elige la opción y haz clic en **Agregar al carrito**.
 
 ## 3. Ajusta o Elimina Artículos
 
-**Aumentar cantidad:** ▲
-
-**Disminuir cantidad:** ▼
-
-**Eliminar:** Ícono de papelera roja
+- **Cantidad**: escribe la nueva cantidad o usa las flechas.
+- **Eliminar**: el ícono de papelera elimina el artículo, y **Remover Todo** vacía el pedido.
 
 Los totales se actualizan automáticamente.
 
-## 4. Revisa el Pedido
-Verifica:
-- Artículos
-- Cantidades
-- Monto total
+## 4. Agrega un Descuento (Opcional)
 
-## 5. Selecciona el Método de Pago
-Elige del menú desplegable:
-- **BTC (Lightning)**
+Solo ves esta opción si tu rol tiene el permiso **Aplicar descuentos**.
 
-## 6. Completa el Pago
+1. Junto a **Descuento**, haz clic en **Agregar**.
+2. Elige **%** para un porcentaje o cambia a monto fijo, e ingresa el valor.
+3. Haz clic en **Aplicar**. Usa **Quitar** para retirar el descuento.
+
+## 5. Agrega una Propina (Opcional)
+
+Si las propinas están habilitadas, la sección **Propina** muestra los porcentajes sugeridos, **Sin propina** y **Otra**. Con **Otra** ingresas un porcentaje o un monto fijo y haces clic en **Aplicar**.
+
+Para habilitar o deshabilitar las propinas o cambiar los porcentajes sugeridos, ve a **Configuración** → **Negocio** → **Propinas**.
+
+## 6. Revisa el Pedido
+
+Verifica los artículos, las cantidades, el **Subtotal**, el descuento, la propina y el **Total**.
+
+## 7. Selecciona el Método de Pago
+
+**BTC (Lightning)** viene seleccionado. La lista también incluye **Efectivo**, **Tarjeta de Crédito**, **Tarjeta de Débito** y **Bank Transfer** (transferencia bancaria). Elige uno y haz clic en **Pagar**.
+
+## 8. Completa el Pago
 
 ### Bitcoin (Lightning)
-1. Selecciona **BTC**
-2. Haz clic en **Pagar**
-3. El cliente escanea el código QR de la factura
-4. Una vez pagado, haz clic en **Pago Recibido**
-5. Éxito → Venta completada
+
+1. La ventana **Pago con Bitcoin (Lightning)** muestra una factura QR con el total en tu moneda y en sats.
+2. El cliente escanea el QR y paga.
+3. Cuando llega el pago, la ventana muestra **Pago confirmado**. Haz clic en **Cerrar**.
+
+Si la conexión en vivo se cae mientras esperas, aparece el botón **Marcar como pagado** para registrar un pago que sabes que llegó.
+
+### Efectivo
+
+1. En **Pago en Efectivo**, ingresa el **Efectivo recibido**. Ambrosia muestra el **Cambio**.
+2. Haz clic en **Confirmar pago**.
+
+### Tarjeta de Crédito o Débito
+
+1. **Pago con tarjeta** muestra el **Total a cobrar** y el método de tarjeta que elegiste.
+2. Cobra con tu terminal de tarjetas y haz clic en **Confirmar pago**.
+
+### Transferencia Bancaria
+
+1. En **Pago por Transferencia Bancaria**, ingresa el **Número de referencia** de la transferencia (opcional).
+2. Haz clic en **Confirmar pago**.
+
+Un mensaje de éxito confirma la venta.

@@ -1,39 +1,69 @@
 # Sale
 
 ## 1. Start a Sale
+
 - Dashboard → **Sale**
-- Left: Products  
-- Right: Order Summary + Payment
+- Left: your products
+- Right: the order **Summary** and the payment
+
+On a phone, tap **Checkout** to open the summary.
 
 ## 2. Add Products
 
-Click **Add** on any product card.
+Click **Add** on any product card. If the product has variants, the **Select variant** window opens: pick the option and click **Add to cart**.
 
 ## 3. Adjust or Remove Items
 
-**Increase qty:** ▲
-
-**Decrease qty:** ▼
-
-**Remove:** Red trash icon
+- **Quantity**: type the new quantity or use the arrows.
+- **Remove**: the trash icon removes the item, and **Remove All Items** empties the order.
 
 Totals update automatically.
 
-## 4. Review Order
-Check:
-- Items  
-- Quantities  
-- Total amount  
+## 4. Add a Discount (Optional)
 
-## 5. Select Payment Method
-Choose from dropdown:
-- **BTC (Lightning)**
+You only see this option if your role has the **Apply discounts** permission.
 
-## 6. Complete Payment
+1. Next to **Discount**, click **Add**.
+2. Choose **%** for a percentage or switch to a fixed amount, and enter the value.
+3. Click **Apply**. Use **Remove** to take the discount off.
+
+## 5. Add a Tip (Optional)
+
+If tips are enabled, the **Tip** section shows the suggested percentages, **No tip** and **Custom**. With **Custom** you enter a percentage or a fixed amount and click **Apply**.
+
+To turn tips on or off or change the suggested percentages, go to **Settings** → **Business** → **Tips**.
+
+## 6. Review Order
+
+Check the items, quantities, **Subtotal**, discount, tip and **Total**.
+
+## 7. Select Payment Method
+
+**BTC (Lightning)** is selected by default. The list also includes **Efectivo** (cash), **Tarjeta de Crédito** and **Tarjeta de Débito** (credit and debit card) and **Bank Transfer**. Pick one and click **Pay**.
+
+## 8. Complete Payment
 
 ### Bitcoin (Lightning)
-1. Select **BTC**  
-2. Click **Pay**  
-3. Customer scans the QR invoice  
-4. Once paid, click **Payment Received**  
-5. Success → Sale completed
+
+1. The **Pay with Bitcoin (Lightning)** window shows a QR invoice with the total in your currency and in sats.
+2. The customer scans the QR and pays.
+3. When the payment arrives, the window shows **Payment confirmed**. Click **Close**.
+
+If the live connection drops while you wait, a **Mark as paid** button appears so you can register a payment you know arrived.
+
+### Cash
+
+1. In **Cash Payment**, enter the **Cash received**. Ambrosia shows the **Change**.
+2. Click **Confirm payment**.
+
+### Credit or Debit Card
+
+1. **Card Payment** shows the **Total due** and the card method you chose.
+2. Charge the card on your card terminal and click **Confirm payment**.
+
+### Bank Transfer
+
+1. In **Bank Transfer Payment**, enter the transfer's **Reference number** (optional).
+2. Click **Confirm payment**.
+
+A success message confirms the sale.
