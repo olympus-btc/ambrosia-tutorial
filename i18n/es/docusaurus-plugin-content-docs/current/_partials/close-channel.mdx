@@ -11,9 +11,11 @@ Ambrosia debe estar en ejecución para poder cerrar el canal.
 
 ## Paso 1: Ve a Billetera
 
-Desde el Dashboard, ve a **Billetera** e ingresa tu contraseña de billetera.
+Desde el Dashboard, ve a **Billetera** e ingresa tu contraseña de wallet.
 
-En la sección **Lightning Channels**, encuentra tu canal y haz clic en **Close Channel**.
+En la sección **Canales Lightning**, encuentra tu canal y haz clic en **Cerrar Canal**.
+
+Si el cifrado de secretos está bloqueado, desbloquéalo primero en **Configuración** → **Cifrado de secretos**.
 
 ## Paso 2: Ingresa los datos
 
@@ -47,5 +49,5 @@ Haz clic en **Confirmar Cierre**.
 Un diálogo de éxito muestra **"Cierre de canal iniciado"** con un **ID de Transacción**. Puedes copiarlo con **Copiar TX ID** y rastrearlo en un explorador de bloques Bitcoin como https://mempool.space/
 
 :::info
-El estado del canal mostrará **"Cerrando — finalizando la transacción de cierre"**. El canal se cerrará completamente después de 6 confirmaciones y los fondos estarán disponibles en la dirección on-chain que proporcionaste.
+Mientras se cierra, el estado del canal pasa por **Cerrando — liquidando pagos pendientes**, **Cerrando — finalizando la transacción de cierre** y **Cerrando — esperando confirmación en blockchain**, y termina como **Cerrado — desaparecerá al reiniciar el nodo**. El canal se cerrará completamente después de 6 confirmaciones y los fondos estarán disponibles en la dirección on-chain que proporcionaste.
 :::
