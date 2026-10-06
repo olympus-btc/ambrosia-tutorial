@@ -1,12 +1,6 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,7 +8,7 @@ const config = {
   tagline: 'Welcome to the Ambrosia Tutorial, Learn how to install, configure, and use Ambrosia Point of Sale (PoS) to accept Bitcoin payments.',
   favicon: 'img/favicon.ico',
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
   url: 'https://tutorial.ambrosiapay.com/',
   baseUrl: '/',
@@ -50,6 +44,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },

@@ -1,41 +1,35 @@
-# Website
+# Ambrosia Tutorial
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Source of [tutorial.ambrosiapay.com](https://tutorial.ambrosiapay.com/), the step-by-step guide to install, configure, and use [Ambrosia](https://github.com/olympus-btc/ambrosia), a point of sale that accepts Bitcoin payments over the Lightning Network. Built with [Docusaurus](https://docusaurus.io/).
 
-## Installation
+## Requirements
 
-```bash
-yarn
-```
+- Node.js 20 or newer (includes npm)
 
-## Local Development
+## Local development
 
 ```bash
-yarn start
+npm ci
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+`npm start` serves the English site with hot reload. To preview the Spanish site, run `npm start -- --locale es`.
 
 ## Build
 
 ```bash
-yarn build
+npm run build
+npm run serve
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+`npm run build` generates both languages into `build/`, and `npm run serve` serves that output locally.
+
+## Content and translations
+
+- English pages live in `docs/`.
+- Spanish pages live in `i18n/es/docusaurus-plugin-content-docs/current/` and mirror the same file structure.
+- Every content change has to be made in both languages.
 
 ## Deployment
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Every push to `main` builds the site and deploys it to GitHub Pages through GitHub Actions (`.github/workflows/deployment.yml`). The workflow can also be run manually from the Actions tab.
