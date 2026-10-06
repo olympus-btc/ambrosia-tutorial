@@ -50,6 +50,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
