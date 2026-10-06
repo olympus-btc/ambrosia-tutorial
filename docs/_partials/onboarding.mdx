@@ -1,0 +1,73 @@
+## Step 1: Choose Your Business Type
+
+The first screen asks **What type of business do you have?** **Store** is already selected, so click **Next**. Restaurant and Freelancer are marked as coming soon.
+
+:::info
+Moving from another Ambrosia installation? Click **Restoring from a previous backup?** on this screen to restore a backup file exported from it instead of starting from scratch.
+:::
+
+## Step 2: Create Your Admin Account
+
+This account has full access to all features and settings. **Keep these credentials safe**: you need them to manage your store.
+
+**User Name**
+```
+Admin
+```
+
+**Password** and **Confirm Password**
+
+It protects access to the wallet and must be at least 8 characters long and include uppercase and lowercase letters, numbers and special characters.
+```
+Ambrosia2026!
+```
+
+**PIN**
+
+The 4 digits you use to log in to the app.
+```
+0000
+```
+
+## Step 3: Enter Your Store Details
+
+These details appear on receipts, reports and throughout the system.
+
+**Store name**
+```
+Lightning Electronics
+```
+
+**Currency** and **Timezone** are also required, but they come pre-filled: USD and the timezone detected on your device. Change them if they don't match your store.
+
+Optional fields:
+
+- Address
+- Phone
+- Email
+- Tax ID
+- Store logo (PNG, JPG or GIF, up to 5 MB)
+
+## Step 4: Choose the Lightning Backend
+
+Keep **phoenixd** selected and leave **Remote phoenixd node** turned off. This tutorial uses the phoenixd node that comes with your installation.
+
+:::info
+Ambrosia can also receive payments through **Nostr Wallet Connect** (any NWC-compatible wallet, such as Alby Hub) or a **Remote phoenixd node** running elsewhere. The rest of this tutorial assumes phoenixd.
+:::
+
+## Step 5: Add Extra Security (Optional)
+
+Checking **Encrypt phoenixd password, NWC connection, and notification key with a password** protects those secrets with an **Unlock password**. Write it down somewhere safe: it can't be recovered, and you may need to enter it again when the app restarts. While it's locked, the app asks you to unlock it in **Settings** → **Secrets encryption**.
+
+You can leave it unchecked and turn it on later from **Settings**.
+
+## Step 6: Review and Finish
+
+Check the **Summary of your setup**, use **Edit** to fix any section, and click **Finish**. A success message appears, then the page reloads and shows the login screen.
+
+## First Login
+
+1. Under **Employee Selection**, choose your user.
+2. Enter your 4-digit PIN.
+3. Click **Log In**.

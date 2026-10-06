@@ -5,6 +5,6 @@ sidebar_position: 5
 slug: /channel-close-desktop-app
 ---
 
-import Body from '../_partials/channel.mdx';
+import Body from '../_partials/close-channel.mdx';
 
 <Body />

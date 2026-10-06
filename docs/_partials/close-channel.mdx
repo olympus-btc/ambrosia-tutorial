@@ -15,6 +15,8 @@ From the Dashboard, go to **Wallet** and enter your wallet password.
 
 Under **Lightning Channels**, find your channel and click **Close Channel**.
 
+If secrets encryption is locked, unlock it first in **Settings** → **Secrets encryption**.
+
 ## Step 2: Enter the details
 
 A **Close Lightning Channel** dialog will appear:
@@ -47,5 +49,5 @@ Click **Confirm Close**.
 A success dialog shows **"Channel close initiated"** with a Transaction ID. You can copy it with **Copy TX ID** and track it on a Bitcoin block explorer like https://mempool.space/
 
 :::info
-The channel status will show as **"Closing — finalizing closing transaction"**. The channel will be fully closed after 6 confirmations and the funds will be available at the on-chain address you provided.
+While it closes, the channel status goes through **Closing — settling pending payments**, **Closing — finalizing closing transaction** and **Closing — waiting for on-chain confirmation**, and ends as **Closed — will disappear on next restart**. The channel will be fully closed after 6 confirmations and the funds will be available at the on-chain address you provided.
 :::

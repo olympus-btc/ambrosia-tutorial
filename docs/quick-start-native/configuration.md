@@ -4,124 +4,43 @@ sidebar_position: 2
 slug: /quick-configuration-native
 ---
 
+import Onboarding from '../_partials/onboarding.mdx';
+import SeedBackup from '../_partials/seed-backup.mdx';
+import OpenChannel from '../_partials/open-channel.mdx';
+
 # Configuration
 
 ## Initial Setup (Onboarding)
 
 When you first open Ambrosia in your browser, you will be greeted by the onboarding wizard. This process will guide you through creating your first store and administrator account.
 
-## Step 1: Select Store
+<Onboarding />
 
-On the first screen, you will need to initialize your workspace. If this is your first time, you will create a new store profile that will hold all your products, sales data, and configurations.
+<SeedBackup />
 
-## Step 2: Create Your Admin Account
+## Open a Channel / Get Inbound Liquidity
 
-This step creates the primary administrator account for your POS system. This account will have full access to all features and settings.
+Your node opens its first Lightning channel, with ACINQ, when it receives its first payment. By default phoenixd requests 2M sats of inbound liquidity, which needs a first payment of about 25,000 sats. To open the channel with 5000 sats instead, turn auto-liquidity off before your first deposit:
 
-### Required Fields
-
-Please provide the following credentials. **Keep these safe**, as they are required to manage your store.
-
-### User Name
-
-The display name for your administrator account.
-
-**User Name Example**:
-```
-Admin
+```bash
+sed -i '/^auto-liquidity=/d;/^max-mining-fee=/d' ~/.phoenix/phoenix.conf && printf 'auto-liquidity=off\nmax-mining-fee=5000\n' >> ~/.phoenix/phoenix.conf
 ```
 
-### PIN (4-digit)
+Then restart phoenixd so it picks up the change. If you installed the systemd services, run:
 
-**PIN Example**:
-```
-0000
-```
-
-### Wallet Password
-
-**Password Example**:
-```
-Ambrosia2026!
+```bash
+sudo systemctl restart phoenixd
 ```
 
-## Step 3: Enter Your Business Details
+Otherwise, click **Restart phoenixd** in **Settings** → **System**, or stop `run-phoenixd.sh` with Ctrl + C and start it again.
 
-This step collects important information about your business that will appear on receipts, reports, and throughout the system.
-
-**Note**: The only required field is `Store Name`.
-
-### Store Name
-
-**Store Name Example**:
-```
-Lightning Electronics
-```
-### Optional fields
-- Address
-- Phone
-- Email
-- RFC (Tax ID)
-- Currency
-- Store Logo
-
-### Click Next, verify store information, then click Finish to complete the setup
-
-Congratulations! You've successfully configured your Ambrosia Point of Sale system.
-
-### What Happens Next
-
-After completing the setup wizard:
-1. The system saves your configuration
-2. Your database is initialized with your business information
-3. Your admin account is created
-4. You're redirected to the login screen
-
-## First Login
-
-**Login Steps:**
-
-1. **Select Your User**
-
-2. **Enter Your PIN**
-
-3. **Log In**
-
-## Step 4: Open a channel/Get inbound liquidity
-
-:::warning Back up your recovery phrase first
-Before depositing any funds, make sure you have securely backed up your wallet recovery phrase (seed). Your seed is the only way to recover your funds if your device is lost, reset, or damaged. Write it down, store it offline somewhere safe, and never share it with anyone.
-:::
-
-Next, we deposit 5k sats into our node:
-
-- On the Dashboard, go to Wallet
-
-:::warning
-If your wallet keeps asking for a password even after you have correctly entered it, it's a bug (Will be fixed soon), just refresh the web page or hit Ctrl + R on your keyboard
-:::
-
-- Enter your password
-
-- Enter amount e.g.
+Check the result with `cat ~/.phoenix/phoenix.conf`. The file should end with these two lines:
 
 ```
-5000
+auto-liquidity=off
+max-mining-fee=5000
 ```
 
-- Add a description (Optional) e.g. 
+If you prefer 2M sats of inbound liquidity, skip this step and make your first payment of about 25,000 sats instead.
 
-```
-Channel open
-```
-
-:::warning
-Make sure you create the invoice for 5000 sats to open the channel, otherwise payment could fail
-:::
-
-- Scan it with your lightning wallet and pay, you should see a confirmation on the screen.
-
-:::info
-These sats cover the mining fee to open a channel with ACINQ.
-They are not refundable.
-:::
+<OpenChannel />

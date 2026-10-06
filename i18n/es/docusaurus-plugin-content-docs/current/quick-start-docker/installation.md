@@ -7,8 +7,8 @@ slug: /quick-installation-docker
 # Instalación
 
 ## Requisitos Mínimos
-- **SO**: Linux (Ubuntu 20.04+, Debian 10+), macOS 10.15+, o Windows 10/11
-- **RAM**: 2GB mínimo, 4GB recomendado
+- **SO**: Linux, macOS o Windows 10/11 (64 bits), siempre que pueda ejecutar Docker. En macOS y Windows, revisa las versiones que soporta Docker Desktop: [macOS](https://docs.docker.com/desktop/setup/install/mac-install/), [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+- **RAM**: 4GB mínimo, 8GB recomendado
 - **Espacio en Disco**: 2GB de espacio libre
 - **Red**: Conexión a internet
 
@@ -94,6 +94,10 @@ Descarga e instala desde [git-scm.com](https://git-scm.com/download/win)
 
 Ahora descargaremos el código fuente de Ambrosia desde GitHub.
 
+:::info
+Si ya tienes la carpeta `ambrosia` de una instalación anterior, sáltate este paso y sigue "Actualiza desde una Versión Anterior" en el Paso 4.
+:::
+
 ## Navega a tu Directorio Preferido
 
 ```bash
@@ -113,6 +117,10 @@ git clone https://github.com/olympus-btc/ambrosia.git
 cd ambrosia
 ```
 
+:::info
+La rama `main` siempre corresponde al último release de Ambrosia (v0.9.0-beta cuando se escribió esta guía).
+:::
+
 ## Verifica los Archivos
 
 Comprueba que estás en el directorio correcto con los archivos del proyecto:
@@ -128,20 +136,18 @@ Deberías ver archivos que incluyen:
 
 # Paso 4: Construye e Inicia los Contenedores
 
-:::info
-Si tienes una versión anterior de Ambrosia en Docker, primero debes hacer esto:
-:::
+Ejecuta estos comandos desde el directorio `ambrosia`.
 
-Desde el directorio `ambrosia`, ejecuta:
+## Actualiza desde una Versión Anterior
+
+Sáltate esto si es una instalación nueva. Si ya usaste una versión anterior de Ambrosia con Docker, primero trae el código más reciente y reconstruye las imágenes:
+
 ```bash
+git pull
 docker-compose up --build -d
 ```
 
-:::info
-Si es una instalación nueva, puedes saltarte el paso anterior.
-:::
-
-Desde el directorio `ambrosia`, ejecuta:
+## Inicia Ambrosia
 
 ```bash
 docker-compose up -d --wait && docker-compose restart
@@ -157,7 +163,10 @@ Anota tu semilla y guárdala en un lugar seguro/secreto (**MUY IMPORTANTE ANTES 
 docker exec -it phoenixd cat /phoenix/.phoenix/seed.dat
 ```
 
-## Paso 6: Configura phoenixd para liquidez entrante
+También puedes verla después en la app, en **Configuración** → **Bitcoin y Wallet** → **SEED de Lightning**.
+
+# Paso 6: Configura phoenixd para liquidez entrante
+
 Por defecto, phoenixd solicitará 2Msat de liquidez entrante al LSP de ACINQ, cada vez que se quede sin liquidez entrante. Esto incluye cuando inicias el nodo por primera vez y recibes tu primer pago. ACINQ cobra el 1% del monto de liquidez entrante solicitada, que son 20ksat (más la comisión de minería). Como 20ksat equivalen aproximadamente a US$20 al momento de escribir esto, y como no necesitamos tanta liquidez entrante para un workshop, configuramos phoenixd para que no solicite liquidez entrante.
 
 *(Nota: si realmente quieres 2M sats de liquidez entrante, omite esto. Si tomas esta ruta, deberías enviar ~25ksats como tu primer pago, la mayoría de los cuales serán tomados por ACINQ como comisión)*:
