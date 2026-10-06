@@ -4,92 +4,19 @@ sidebar_position: 2
 slug: /quick-configuration-native
 ---
 
+import Onboarding from '../_partials/onboarding.mdx';
+
 # Configuration
 
 ## Initial Setup (Onboarding)
 
 When you first open Ambrosia in your browser, you will be greeted by the onboarding wizard. This process will guide you through creating your first store and administrator account.
 
-## Step 1: Select Store
+<Onboarding />
 
-On the first screen, you will need to initialize your workspace. If this is your first time, you will create a new store profile that will hold all your products, sales data, and configurations.
+## Open a Channel / Get Inbound Liquidity
 
-## Step 2: Create Your Admin Account
-
-This step creates the primary administrator account for your POS system. This account will have full access to all features and settings.
-
-### Required Fields
-
-Please provide the following credentials. **Keep these safe**, as they are required to manage your store.
-
-### User Name
-
-The display name for your administrator account.
-
-**User Name Example**:
-```
-Admin
-```
-
-### PIN (4-digit)
-
-**PIN Example**:
-```
-0000
-```
-
-### Wallet Password
-
-**Password Example**:
-```
-Ambrosia2026!
-```
-
-## Step 3: Enter Your Business Details
-
-This step collects important information about your business that will appear on receipts, reports, and throughout the system.
-
-**Note**: The only required field is `Store Name`.
-
-### Store Name
-
-**Store Name Example**:
-```
-Lightning Electronics
-```
-### Optional fields
-- Address
-- Phone
-- Email
-- RFC (Tax ID)
-- Currency
-- Store Logo
-
-### Click Next, verify store information, then click Finish to complete the setup
-
-Congratulations! You've successfully configured your Ambrosia Point of Sale system.
-
-### What Happens Next
-
-After completing the setup wizard:
-1. The system saves your configuration
-2. Your database is initialized with your business information
-3. Your admin account is created
-4. You're redirected to the login screen
-
-## First Login
-
-**Login Steps:**
-
-1. **Select Your User**
-
-2. **Enter Your PIN**
-
-3. **Log In**
-
-## Step 4: Open a channel/Get inbound liquidity
-
-:::warning Back up your recovery phrase first
+:::warning[Back up your recovery phrase first]
 Before depositing any funds, make sure you have securely backed up your wallet recovery phrase (seed). Your seed is the only way to recover your funds if your device is lost, reset, or damaged. Write it down, store it offline somewhere safe, and never share it with anyone.
 :::
 
