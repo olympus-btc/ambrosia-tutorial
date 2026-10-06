@@ -22,4 +22,5 @@ yarn-error.log*
 # AI generated files
 CLAUDE.md
 AGENTS.md
+*PLAN.md
 .claude
