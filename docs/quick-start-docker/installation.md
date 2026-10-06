@@ -163,7 +163,10 @@ Write down your seed and put it somewhere secret/safe (**VERY IMPORTANT BEFORE P
 docker exec -it phoenixd cat /phoenix/.phoenix/seed.dat
 ```
 
-## Step 6: Configure phoenixd for inbound liquidity
+You can also see it later in the app, in **Settings** → **Bitcoin & Wallet** → **Lightning SEED**.
+
+# Step 6: Configure phoenixd for inbound liquidity
+
 By default, phoenixd will request 2Msat of inbound liquidity from the ACINQ LSP, whenever it runs out of inbound liquidity. This of course includes when you first start the node and receive your very first payment. ACINQ charges 1% of the amount of inbound liquidity requested, which is 20ksat (plus the mining fee). Since 20ksat is about US$20 at the time of writing, and since we don't need this much inbound liquidity for a workshop, we instead configure phoenixd not to request inbound liquidity.
 
 *(Note: if you actually want 2M sats of inbound liquidity, just omit this. If you go this route, you should send ~25ksats as your first payment, most of which will be taken by ACINQ for the fee)*:

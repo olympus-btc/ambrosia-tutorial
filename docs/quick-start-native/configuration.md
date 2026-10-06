@@ -5,6 +5,8 @@ slug: /quick-configuration-native
 ---
 
 import Onboarding from '../_partials/onboarding.mdx';
+import SeedBackup from '../_partials/seed-backup.mdx';
+import OpenChannel from '../_partials/open-channel.mdx';
 
 # Configuration
 
@@ -14,41 +16,31 @@ When you first open Ambrosia in your browser, you will be greeted by the onboard
 
 <Onboarding />
 
+<SeedBackup />
+
 ## Open a Channel / Get Inbound Liquidity
 
-:::warning[Back up your recovery phrase first]
-Before depositing any funds, make sure you have securely backed up your wallet recovery phrase (seed). Your seed is the only way to recover your funds if your device is lost, reset, or damaged. Write it down, store it offline somewhere safe, and never share it with anyone.
-:::
+Your node opens its first Lightning channel, with ACINQ, when it receives its first payment. By default phoenixd requests 2M sats of inbound liquidity, which needs a first payment of about 25,000 sats. To open the channel with 5000 sats instead, turn auto-liquidity off before your first deposit:
 
-Next, we deposit 5k sats into our node:
-
-- On the Dashboard, go to Wallet
-
-:::warning
-If your wallet keeps asking for a password even after you have correctly entered it, it's a bug (Will be fixed soon), just refresh the web page or hit Ctrl + R on your keyboard
-:::
-
-- Enter your password
-
-- Enter amount e.g.
-
-```
-5000
+```bash
+sed -i '/^auto-liquidity=/d;/^max-mining-fee=/d' ~/.phoenix/phoenix.conf && printf 'auto-liquidity=off\nmax-mining-fee=5000\n' >> ~/.phoenix/phoenix.conf
 ```
 
-- Add a description (Optional) e.g. 
+Then restart phoenixd so it picks up the change. If you installed the systemd services, run:
+
+```bash
+sudo systemctl restart phoenixd
+```
+
+Otherwise, click **Restart phoenixd** in **Settings** → **System**, or stop `run-phoenixd.sh` with Ctrl + C and start it again.
+
+Check the result with `cat ~/.phoenix/phoenix.conf`. The file should end with these two lines:
 
 ```
-Channel open
+auto-liquidity=off
+max-mining-fee=5000
 ```
 
-:::warning
-Make sure you create the invoice for 5000 sats to open the channel, otherwise payment could fail
-:::
+If you prefer 2M sats of inbound liquidity, skip this step and make your first payment of about 25,000 sats instead.
 
-- Scan it with your lightning wallet and pay, you should see a confirmation on the screen.
-
-:::info
-These sats cover the mining fee to open a channel with ACINQ.
-They are not refundable.
-:::
+<OpenChannel />

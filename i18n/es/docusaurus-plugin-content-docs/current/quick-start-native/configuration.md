@@ -5,6 +5,8 @@ slug: /quick-configuration-native
 ---
 
 import Onboarding from '../_partials/onboarding.mdx';
+import SeedBackup from '../_partials/seed-backup.mdx';
+import OpenChannel from '../_partials/open-channel.mdx';
 
 # Configuración
 
@@ -14,41 +16,31 @@ Cuando abres Ambrosia en tu navegador por primera vez, serás recibido por el as
 
 <Onboarding />
 
+<SeedBackup />
+
 ## Abrir un Canal / Obtener Liquidez Entrante
 
-:::warning[Respalda tu frase de recuperación primero]
-Antes de depositar fondos, asegúrate de haber respaldado de forma segura la frase de recuperación (seed) de tu billetera. Tu seed es la única forma de recuperar tus fondos si pierdes, reinicias o dañas tu dispositivo. Anótala, guárdala offline en un lugar seguro y nunca la compartas con nadie.
-:::
+Tu nodo abre su primer canal Lightning, con ACINQ, cuando recibe su primer pago. Por defecto, phoenixd pide 2M sats de liquidez entrante, lo que requiere un primer pago de unos 25,000 sats. Para abrir el canal con 5000 sats, apaga la auto-liquidez antes de tu primer depósito:
 
-A continuación, depositamos 5k sats en nuestro nodo:
-
-- En el Dashboard, ve a Billetera
-
-:::warning
-Si tu billetera sigue pidiendo una contraseña incluso después de haberla ingresado correctamente, es un bug (se corregirá pronto); simplemente recarga la página web o presiona Ctrl + R en tu teclado
-:::
-
-- Ingresa tu contraseña
-
-- Ingresa el monto, p.ej.
-
-```
-5000
+```bash
+sed -i '/^auto-liquidity=/d;/^max-mining-fee=/d' ~/.phoenix/phoenix.conf && printf 'auto-liquidity=off\nmax-mining-fee=5000\n' >> ~/.phoenix/phoenix.conf
 ```
 
-- Agrega una descripción (Opcional), p.ej.
+Después reinicia phoenixd para que tome el cambio. Si instalaste los servicios systemd, ejecuta:
+
+```bash
+sudo systemctl restart phoenixd
+```
+
+Si no, haz clic en **Reiniciar phoenixd** en **Configuración** → **Sistema**, o detén `run-phoenixd.sh` con Ctrl + C y vuelve a iniciarlo.
+
+Revisa el resultado con `cat ~/.phoenix/phoenix.conf`. El archivo debe terminar con estas dos líneas:
 
 ```
-Channel open
+auto-liquidity=off
+max-mining-fee=5000
 ```
 
-:::warning
-Asegúrate de crear la factura por 5000 sats para abrir el canal, de lo contrario el pago podría fallar
-:::
+Si prefieres 2M sats de liquidez entrante, omite este paso y haz tu primer pago de unos 25,000 sats.
 
-- Escanéalo con tu billetera Lightning y paga; deberías ver una confirmación en la pantalla.
-
-:::info
-Estos sats cubren la comisión de minería para abrir un canal con ACINQ.
-No son reembolsables.
-:::
+<OpenChannel />

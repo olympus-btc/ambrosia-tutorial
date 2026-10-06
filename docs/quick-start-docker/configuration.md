@@ -5,6 +5,8 @@ slug: /quick-configuration-docker
 ---
 
 import Onboarding from '../_partials/onboarding.mdx';
+import SeedBackup from '../_partials/seed-backup.mdx';
+import OpenChannel from '../_partials/open-channel.mdx';
 
 # Configuration
 
@@ -14,37 +16,10 @@ When you first open Ambrosia in your browser, you will be greeted by the onboard
 
 <Onboarding />
 
+<SeedBackup />
+
 ## Open a Channel / Get Inbound Liquidity
 
-Next, we deposit 5k sats into our node:
+Your node opens its first Lightning channel, with ACINQ, when it receives its first payment. You turned auto-liquidity off in steps 6 and 7 of the installation, so a payment of 5000 sats is enough to open it.
 
-- On the Dashboard, go to Wallet
-
-:::warning
-If your wallet keeps asking for a password even after you have correctly entered it, it's a bug (Will be fixed soon), just refresh the web page or hit Ctrl + R on your keyboard
-:::
-
-- Enter your password
-
-- Enter amount e.g.
-
-```
-5000
-```
-
-- Add a description (Optional) e.g. 
-
-```
-Channel open
-```
-
-:::warning
-Make sure you create the invoice for 5000 sats to open the channel, otherwise payment could fail
-:::
-
-- Scan it with your lightning wallet and pay, you should see a confirmation on the screen.
-
-:::info
-These sats cover the mining fee to open a channel with ACINQ.
-They are not refundable.
-:::
+<OpenChannel />

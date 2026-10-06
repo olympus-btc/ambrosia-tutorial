@@ -163,7 +163,10 @@ Anota tu semilla y guárdala en un lugar seguro/secreto (**MUY IMPORTANTE ANTES 
 docker exec -it phoenixd cat /phoenix/.phoenix/seed.dat
 ```
 
-## Paso 6: Configura phoenixd para liquidez entrante
+También puedes verla después en la app, en **Configuración** → **Bitcoin y Wallet** → **SEED de Lightning**.
+
+# Paso 6: Configura phoenixd para liquidez entrante
+
 Por defecto, phoenixd solicitará 2Msat de liquidez entrante al LSP de ACINQ, cada vez que se quede sin liquidez entrante. Esto incluye cuando inicias el nodo por primera vez y recibes tu primer pago. ACINQ cobra el 1% del monto de liquidez entrante solicitada, que son 20ksat (más la comisión de minería). Como 20ksat equivalen aproximadamente a US$20 al momento de escribir esto, y como no necesitamos tanta liquidez entrante para un workshop, configuramos phoenixd para que no solicite liquidez entrante.
 
 *(Nota: si realmente quieres 2M sats de liquidez entrante, omite esto. Si tomas esta ruta, deberías enviar ~25ksats como tu primer pago, la mayoría de los cuales serán tomados por ACINQ como comisión)*:
