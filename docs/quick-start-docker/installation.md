@@ -7,8 +7,8 @@ slug: /quick-installation-docker
 # Installation
 
 ## Minimum Requirements
-- **OS**: Linux (Ubuntu 20.04+, Debian 10+), macOS 10.15+, or Windows 10/11
-- **RAM**: 2GB minimum, 4GB recommended
+- **OS**: Linux, macOS or Windows 10/11 (64-bit), as long as it can run Docker. On macOS and Windows, check the versions Docker Desktop supports: [macOS](https://docs.docker.com/desktop/setup/install/mac-install/), [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+- **RAM**: 4GB minimum, 8GB recommended
 - **Disk Space**: 2GB free space
 - **Network**: Internet connection
 
@@ -94,6 +94,10 @@ Download and install from [git-scm.com](https://git-scm.com/download/win)
 
 Now we'll download the Ambrosia source code from GitHub.
 
+:::info
+If you already have the `ambrosia` folder from a previous installation, skip this step and follow "Update from a Previous Version" in Step 4.
+:::
+
 ## Navigate to Your Preferred Directory
 
 ```bash
@@ -113,6 +117,10 @@ git clone https://github.com/olympus-btc/ambrosia.git
 cd ambrosia
 ```
 
+:::info
+The `main` branch always matches the latest Ambrosia release (v0.9.0-beta when this guide was written).
+:::
+
 ## Verify the Files
 
 Check that you're in the correct directory with the project files:
@@ -128,20 +136,18 @@ You should see files including:
 
 # Step 4: Build and Start the Containers
 
-:::info
-If you have a previous version of ambrosia in docker, you need to do this first:
-:::
+Run these commands from the `ambrosia` directory.
 
-From the `ambrosia` directory, run:
+## Update from a Previous Version
+
+Skip this on a fresh installation. If you already ran an older version of Ambrosia with Docker, get the latest code and rebuild the images first:
+
 ```bash
+git pull
 docker-compose up --build -d
 ```
 
-:::info
-If this is a fresh installation, you can skip the previous step.
-:::
-
-From the `ambrosia` directory, run:
+## Start Ambrosia
 
 ```bash
 docker-compose up -d --wait && docker-compose restart
