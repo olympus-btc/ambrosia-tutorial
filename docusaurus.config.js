@@ -100,6 +100,10 @@ const config = {
                 label: 'Quick Start - Native',
                 to: '/quick-start-native',
               },
+              {
+                label: 'Tutorials',
+                to: '/tutorials',
+              },
             ],
           }
         ],
