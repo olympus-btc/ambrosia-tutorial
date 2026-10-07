@@ -212,5 +212,5 @@ You may need to turn off your VPN if page is not loading
 :::
 
 :::tip
-To update Ambrosia later, see [Updating Ambrosia](../tutorials/updating.md).
+To update Ambrosia later, see [Updating Ambrosia](../tutorials/updating.md). To open it from a tablet or phone, see [Other Devices](../tutorials/other-devices.md).
 :::

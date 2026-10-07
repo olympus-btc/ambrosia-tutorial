@@ -37,7 +37,7 @@ curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9
 ```
 
 :::tip
-Add `--expose-lan` to the install command if the Ambrosia server should listen on your local network instead of only on this computer. It only takes effect on a fresh install: it writes `http-bind-ip=0.0.0.0` to a new `~/.Ambrosia-POS/ambrosia.conf`. Use it only on a network you trust.
+Add `--expose-lan` to the install command if the Ambrosia server should listen on your local network instead of only on this computer. It only takes effect on a fresh install: it writes `http-bind-ip=0.0.0.0` to a new `~/.Ambrosia-POS/ambrosia.conf`. Use it only on a network you trust. You don't need it to open Ambrosia from a tablet or phone; see [Other Devices](../tutorials/other-devices.md).
 :::
 
 **Alternative methods:**

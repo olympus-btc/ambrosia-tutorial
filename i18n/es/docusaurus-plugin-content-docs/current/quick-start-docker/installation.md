@@ -212,5 +212,5 @@ Es posible que debas desactivar tu VPN si la página no carga
 :::
 
 :::tip
-Para actualizar Ambrosia más adelante, consulta [Actualizar Ambrosia](../tutorials/updating.md).
+Para actualizar Ambrosia más adelante, consulta [Actualizar Ambrosia](../tutorials/updating.md). Para abrirlo desde una tablet o un teléfono, consulta [Otros Dispositivos](../tutorials/other-devices.md).
 :::
