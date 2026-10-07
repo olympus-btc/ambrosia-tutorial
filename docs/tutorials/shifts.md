@@ -36,7 +36,7 @@ The close window also shows the **Z Report**: the shift period, the totals and t
 
 ## Review Past Shifts
 
-Go to **Reports** and open the **Shifts** tab. For the selected period you see each shift with its user, **Opened** and **Closed** times, **Initial Amount**, **Final Amount** and **Difference**, plus the totals and a **Difference by Day** chart.
+Go to [**Reports**](./reports.md) and open the **Shifts** tab. For the selected period you see each shift with its user, **Opened** and **Closed** times, **Initial Amount**, **Final Amount** and **Difference**, plus the totals and a **Difference by Day** chart.
 
 - Click **Details** to see a single shift.
 - Click **Export CSV** to download the list.

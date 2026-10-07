@@ -36,7 +36,7 @@ La ventana de cierre también muestra el **Corte Z**: el período del turno, los
 
 ## Consultar Turnos Anteriores
 
-Ve a **Reportes** y abre la pestaña **Turnos**. Para el período seleccionado ves cada turno con su usuario, **Apertura**, **Cierre**, **Monto Inicial**, **Monto Final** y **Diferencia**, además de los totales y una gráfica de **Diferencia por Día**.
+Ve a [**Reportes**](./reports.md) y abre la pestaña **Turnos**. Para el período seleccionado ves cada turno con su usuario, **Apertura**, **Cierre**, **Monto Inicial**, **Monto Final** y **Diferencia**, además de los totales y una gráfica de **Diferencia por Día**.
 
 - Haz clic en **Detalles** para ver un turno.
 - Haz clic en **Exportar CSV** para descargar la lista.
