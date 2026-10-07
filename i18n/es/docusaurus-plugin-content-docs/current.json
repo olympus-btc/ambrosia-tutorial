@@ -14,5 +14,9 @@
   "sidebar.tutorialSidebar.category.Quick Start - Native": {
     "message": "Inicio Rápido - Nativo",
     "description": "The label for category 'Quick Start - Native' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "Tutoriales",
+    "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
   }
 }
