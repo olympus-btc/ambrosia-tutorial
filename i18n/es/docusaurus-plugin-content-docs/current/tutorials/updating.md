@@ -8,7 +8,7 @@ sidebar_position: 4
 Los nuevos releases de Ambrosia traen funciones y arreglos de seguridad, así que mantén tu instalación al día. Cómo actualizar depende de cómo la instalaste.
 
 :::warning[Antes de actualizar]
-Respalda tu frase de recuperación (**Configuración** → **Bitcoin y Wallet** → **SEED de Lightning**) y exporta los datos de tu tienda (**Configuración** → **Backup y datos**), por si algo sale mal.
+Respalda tu frase de recuperación (**Configuración** → **Bitcoin y Wallet** → **SEED de Lightning**) y exporta los datos de tu tienda (**Configuración** → **Backup y datos**, consulta [Respaldo y Restauración](./backup-and-restore.md)), por si algo sale mal.
 :::
 
 ## App de Escritorio

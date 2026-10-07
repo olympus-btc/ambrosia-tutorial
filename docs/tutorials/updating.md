@@ -8,7 +8,7 @@ sidebar_position: 4
 New Ambrosia releases bring features and security fixes, so keep your installation up to date. How you update depends on how you installed it.
 
 :::warning[Before you update]
-Back up your recovery phrase (**Settings** → **Bitcoin & Wallet** → **Lightning SEED**) and export your store data (**Settings** → **Backup & Data**), in case something goes wrong.
+Back up your recovery phrase (**Settings** → **Bitcoin & Wallet** → **Lightning SEED**) and export your store data (**Settings** → **Backup & Data**, see [Backup and Restore](./backup-and-restore.md)), in case something goes wrong.
 :::
 
 ## Desktop App
