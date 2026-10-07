@@ -210,3 +210,7 @@ No son reembolsables.
 :::warning
 Es posible que debas desactivar tu VPN si la página no carga
 :::
+
+:::tip
+Para actualizar Ambrosia más adelante, consulta [Actualizar Ambrosia](../tutorials/updating.md).
+:::

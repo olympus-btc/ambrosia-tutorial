@@ -114,3 +114,7 @@ La primera vez que lo abras, MacOS mostrará una advertencia de seguridad porque
 5. Espera a que la barra de progreso termine
 6. Asegúrate de que Ejecutar AmbrosiaPoS esté seleccionado
 7. Haz clic en Finalizar para ejecutar AmbrosiaPoS
+
+:::tip
+Para actualizar Ambrosia más adelante, consulta [Actualizar Ambrosia](../tutorials/updating.md).
+:::

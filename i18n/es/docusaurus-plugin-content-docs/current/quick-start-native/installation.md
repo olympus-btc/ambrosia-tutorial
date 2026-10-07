@@ -85,6 +85,10 @@ El script de instalación de Phoenixd lo instala automáticamente. El script des
 
 Consulta [Mastering Phoenixd](https://btcgdl.github.io/Mastering-phoenixd/) para más detalles.
 
+## Actualización
+
+Para actualizar Ambrosia más adelante, consulta [Actualizar Ambrosia](../tutorials/updating.md).
+
 ## Desinstalación
 
 Para desinstalar Ambrosia POS y Phoenixd, ejecuta el siguiente script:
