@@ -63,7 +63,7 @@ Este tutorial está organizado en varias secciones:
 5. **Vender tu Producto** — Venta
 6. **Cerrar tu canal Lightning** — Cierre de canal
 
-Cuando ya estés en marcha, los [Tutoriales](./tutorials/index.md) cubren cada parte de Ambrosia a fondo.
+Cuando ya estés en marcha, los [Tutoriales](./tutorials/index.md) cubren cada parte de Ambrosia a fondo. Si instalas y mantienes la computadora donde corre Ambrosia, las guías de [Avanzado](./advanced/index.md) cubren el despliegue, el mantenimiento y la solución de problemas.
 
 ## ¿Listo para Comenzar?
 
