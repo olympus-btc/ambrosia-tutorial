@@ -20,6 +20,7 @@ This tutorial covers Ambrosia [v0.9.0-beta](https://github.com/olympus-btc/ambro
 
 By following this tutorial, you'll be able to:
 - Install and configure Ambrosia on your machine
+- [Manage users and roles](./tutorials/users-and-roles.md)
 - Back up your recovery phrase and open your first Lightning channel
 - Manage products
 - Process your first sale, with Lightning or other payment methods
@@ -61,6 +62,8 @@ This tutorial is organized into several sections:
 4. **Make a Product** - Product Management
 5. **Sell Your Product** - Sale
 6. **Close your Lightning channel** - Closing a channel
+
+Once you're up and running, the [Tutorials](./tutorials/index.md) cover each part of Ambrosia in depth.
 
 ## Ready to Begin?
 

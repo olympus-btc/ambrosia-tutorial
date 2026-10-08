@@ -37,7 +37,7 @@ curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9
 ```
 
 :::tip
-Add `--expose-lan` to the install command if the Ambrosia server should listen on your local network instead of only on this computer. It only takes effect on a fresh install: it writes `http-bind-ip=0.0.0.0` to a new `~/.Ambrosia-POS/ambrosia.conf`. Use it only on a network you trust.
+Add `--expose-lan` to the install command if the Ambrosia server should listen on your local network instead of only on this computer. It only takes effect on a fresh install: it writes `http-bind-ip=0.0.0.0` to a new `~/.Ambrosia-POS/ambrosia.conf`. Use it only on a network you trust. You don't need it to open Ambrosia from a tablet or phone; see [Other Devices](../tutorials/other-devices.md).
 :::
 
 **Alternative methods:**
@@ -84,6 +84,10 @@ Once both services are running (either via systemd or manually), you can access 
 The Phoenixd installation script installs Phoenixd automatically. The script downloads Phoenixd v0.9.0, verifies the package integrity using GPG and checksums, installs it in `/usr/local/bin`, and optionally configures a systemd service for automatic startup.
 
 Check [Mastering Phoenixd](https://btcgdl.github.io/Mastering-phoenixd/) for more details.
+
+## Updating
+
+To update Ambrosia later, see [Updating Ambrosia](../tutorials/updating.md).
 
 ## Uninstallation 
 

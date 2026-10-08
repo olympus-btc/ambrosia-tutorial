@@ -3,12 +3,12 @@
 The first screen asks **What type of business do you have?** **Store** is already selected, so click **Next**. Restaurant and Freelancer are marked as coming soon.
 
 :::info
-Moving from another Ambrosia installation? Click **Restoring from a previous backup?** on this screen to restore a backup file exported from it instead of starting from scratch.
+Moving from another Ambrosia installation? Click **Restoring from a previous backup?** on this screen to restore a backup file exported from it instead of starting from scratch (see [Backup and Restore](../tutorials/backup-and-restore.md)).
 :::
 
 ## Step 2: Create Your Admin Account
 
-This account has full access to all features and settings. **Keep these credentials safe**: you need them to manage your store.
+This account has full access to all features and settings. **Keep these credentials safe**: you need them to manage your store. Later you can add a user for each person on your team: see [Users and Roles](../tutorials/users-and-roles.md).
 
 **User Name**
 ```
@@ -53,12 +53,12 @@ Optional fields:
 Keep **phoenixd** selected and leave **Remote phoenixd node** turned off. This tutorial uses the phoenixd node that comes with your installation.
 
 :::info
-Ambrosia can also receive payments through **Nostr Wallet Connect** (any NWC-compatible wallet, such as Alby Hub) or a **Remote phoenixd node** running elsewhere. The rest of this tutorial assumes phoenixd.
+Ambrosia can also receive payments through **Nostr Wallet Connect** (any NWC-compatible wallet, such as Alby Hub) or a **Remote phoenixd node** running elsewhere. The rest of this tutorial assumes phoenixd. See [Lightning Settings](../tutorials/lightning-settings.md) for the other backends.
 :::
 
 ## Step 5: Add Extra Security (Optional)
 
-Checking **Encrypt phoenixd password, NWC connection, and notification key with a password** protects those secrets with an **Unlock password**. Write it down somewhere safe: it can't be recovered, and you may need to enter it again when the app restarts. While it's locked, the app asks you to unlock it in **Settings** → **Secrets encryption**.
+Checking **Encrypt phoenixd password, NWC connection, and notification key with a password** protects those secrets with an **Unlock password**. Write it down somewhere safe: it can't be recovered, and you may need to enter it again when the app restarts. While it's locked, the app asks you to unlock it in **Settings** → **Bitcoin & Wallet** → **Secrets encryption** (see [Lightning Settings](../tutorials/lightning-settings.md#secrets-encryption)).
 
 You can leave it unchecked and turn it on later from **Settings**.
 

@@ -114,3 +114,7 @@ The first time you open it, MacOS will show a security warning because it’s no
 5. Wait until the loading bar is done
 6. Make sure Run AmbrosiaPoS is selected
 7. Click Finish to run AmbrosiaPoS
+
+:::tip
+To update Ambrosia later, see [Updating Ambrosia](../tutorials/updating.md).
+:::
