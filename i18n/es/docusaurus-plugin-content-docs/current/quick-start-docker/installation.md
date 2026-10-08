@@ -140,6 +140,10 @@ Ejecuta estos comandos desde el directorio `ambrosia`.
 
 ## Actualiza desde una Versión Anterior
 
+:::warning[¿Actualizas desde una versión anterior a 0.9.1?]
+Desde 0.9.1, los contenedores ya no corren como root, y los volúmenes de una instalación anterior necesitan una migración que se hace una sola vez. Sigue [Seguridad en Docker](../advanced/docker-hardening.md#migrar-tus-volúmenes) en lugar de estos comandos.
+:::
+
 Sáltate esto si es una instalación nueva. Si ya usaste una versión anterior de Ambrosia con Docker, primero trae el código más reciente y reconstruye las imágenes:
 
 ```bash
