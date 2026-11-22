@@ -140,8 +140,8 @@ Run these commands from the `ambrosia` directory.
 
 ## Update from a Previous Version
 
-:::warning[Updating from a version before 0.9.1?]
-Starting with 0.9.1, the containers no longer run as root, and the volumes of an earlier installation need a one-time migration. Follow [Docker Hardening](../advanced/docker-hardening.md#migrate-your-volumes) instead of these commands.
+:::warning[Updating from a version before 0.11.0-beta?]
+Your volumes need a one-time migration, because the `ambrosia` container now runs with a different user. Follow [Docker Hardening](../advanced/docker-hardening.md#migrate-your-volumes) instead of these commands.
 :::
 
 Skip this on a fresh installation. If you already ran an older version of Ambrosia with Docker, get the latest code and rebuild the images first:

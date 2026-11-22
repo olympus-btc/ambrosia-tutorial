@@ -40,7 +40,7 @@ The installation guides pin the Ambrosia release they describe, currently `0.9.0
    grep -rl "0.9.0-beta" docs i18n README.md
    ```
 
-2. Replace it with the new version in those files. Leave mentions of past versions as they are, such as "before 0.9.1" in the Docker hardening guide: they say when something changed, not which version the guides describe.
+2. Replace it with the new version in those files. Leave mentions of past versions as they are, such as "before 0.11.0-beta" in the Docker hardening guide: they say when something changed, not which version the guides describe.
 3. Check on the release page that the file names still follow the same pattern, for example `ambrosia-pos_<version>_amd64.deb`.
 4. Check the versions that depend on the release: the phoenixd version mentioned in the Native guide (`PHOENIXD_TAG` in the Ambrosia `scripts/install.sh`) and the Desktop App minimum requirements (Electron and the bundled Node.js).
 5. Review the guides for UI changes and run `npm run build`.

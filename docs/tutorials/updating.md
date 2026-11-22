@@ -20,8 +20,8 @@ The app checks for updates when it starts and every 6 hours. You can also check 
 
 ## Docker
 
-:::warning[Updating from a version before 0.9.1?]
-Starting with 0.9.1, the containers no longer run as root, and the volumes of an earlier installation need a one-time migration. Follow [Docker Hardening](../advanced/docker-hardening.md#migrate-your-volumes) instead of these commands.
+:::warning[Updating from a version before 0.11.0-beta?]
+Your volumes need a one-time migration, because the `ambrosia` container now runs with a different user. Follow [Docker Hardening](../advanced/docker-hardening.md#migrate-your-volumes) instead of these commands.
 :::
 
 From your `ambrosia` folder, get the latest code and rebuild the images:
