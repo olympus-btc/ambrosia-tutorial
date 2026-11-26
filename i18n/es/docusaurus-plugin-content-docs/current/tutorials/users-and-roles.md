@@ -16,19 +16,24 @@ Necesitas permisos para administrar usuarios y roles. La cuenta de administrador
 1. Ve a **Usuarios** y haz clic en **Agregar Usuario**.
 2. Completa los campos:
    - **Nombre** (obligatorio): el nombre que aparece en la pantalla de inicio de sesión.
-   - **PIN** (obligatorio): 4 dígitos para iniciar sesión.
+   - **PIN** (obligatorio): 6 dígitos para iniciar sesión.
    - **Email** y **Teléfono** (opcionales).
    - **Rol** (obligatorio): lo que el usuario puede hacer. Consulta [Roles](#roles) más abajo.
+   - **Tu PIN** (obligatorio): tu propio PIN, para confirmar el cambio.
 3. Haz clic en **Agregar**.
 
 El nuevo usuario aparece en **Seleccionar Empleado** en la pantalla de inicio de sesión y entra con su PIN.
 
 ## Editar o Eliminar un Usuario
 
-- Haz clic en **Editar** en el usuario, cambia lo que necesites y haz clic en **Guardar**. Ahí también cambias su rol.
-- Haz clic en **Eliminar** y confirma con **Eliminar**. Esta acción no se puede deshacer.
+- Haz clic en **Editar** en el usuario, cambia lo que necesites, ingresa **Tu PIN** y haz clic en **Guardar**. Ahí también cambias su rol o su PIN: escribe 6 dígitos nuevos en **PIN**, o déjalo vacío para mantener el actual.
+- Haz clic en **Eliminar**, ingresa **Tu PIN** y confirma con **Eliminar**. Esta acción no se puede deshacer.
 
 Ambrosia no te deja eliminar al único usuario, ni quitar o eliminar al último administrador.
+
+## Usuarios con PIN de 4 Dígitos
+
+Antes de 0.11.0-beta, los PIN tenían 4 dígitos. Un usuario que todavía tiene uno puede iniciar sesión, y después ve **Actualiza tu PIN**. Un administrador puede hacer clic en **Ir a Usuarios** y cambiar el PIN como se explica arriba; cualquier otro usuario hace clic en **Más tarde** y le pide a un administrador que lo cambie.
 
 ## Roles
 
@@ -43,14 +48,14 @@ Debajo de la lista de usuarios, **Roles y permisos** muestra los roles de la tie
    - **Vendedor**: consulta productos y crea órdenes.
    - **Gerente**: acceso operativo completo.
    - **Administrador**: acceso total al sistema.
-4. Haz clic en **Crear rol**.
+4. Ingresa **Tu PIN** y haz clic en **Crear rol**.
 
 Activar **Con privilegios de administrador** le da al rol todos los permisos. Solo un administrador puede crear u otorgar un rol de administrador.
 
 ### Editar o Eliminar un Rol
 
-- Haz clic en **Editar**, cambia el nombre o los permisos y haz clic en **Guardar cambios**.
-- Haz clic en **Eliminar** para quitar un rol. Los usuarios con ese rol quedan sin rol hasta que les asignes otro.
+- Haz clic en **Editar**, cambia el nombre o los permisos, ingresa **Tu PIN** y haz clic en **Guardar cambios**.
+- Haz clic en **Eliminar** y confirma con **Tu PIN** para quitar un rol. Los usuarios con ese rol quedan sin rol hasta que les asignes otro.
 
 ## Permisos a Tener en Cuenta
 
