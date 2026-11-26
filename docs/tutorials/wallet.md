@@ -36,7 +36,7 @@ The **Lightning Invoice Generated** window shows the QR and the invoice, which y
 Use **Send** to move funds out of the POS, for example to your personal wallet.
 
 1. In the wallet that will receive the funds, create an invoice.
-2. Open the **Send** tab and paste the invoice in **Invoice BOLT11**, or click **Scan QR** to scan it.
+2. Open the **Send** tab and paste the invoice in **BOLT11 Invoice**, or click **Scan QR** to scan it.
 3. Click **Send Lightning Payment**.
 4. Review the amount and description in **Confirm Payment**. If the invoice has no amount, enter it in sats or in your currency.
 5. Click **Confirm Payment**.

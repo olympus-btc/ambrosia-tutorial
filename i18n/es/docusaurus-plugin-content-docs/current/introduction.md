@@ -40,8 +40,8 @@ Siguiendo este tutorial, podrás:
 - Funciona en Linux, Mac o (¡incluso!) Windows
 - Úsala para aprender, aunque ten en cuenta que necesitarás algo que puedas dejar encendido y conectado a internet 24/7 si realmente quieres usarlo en una tienda.
 
-### Wallet Lightning
-- Cualquier wallet Lightning, por ejemplo en tu teléfono, con al menos 5,000 sats para pagar la factura que abre tu canal.
+### Billetera Lightning
+- Cualquier billetera Lightning, por ejemplo en tu teléfono, con al menos 5,000 sats para pagar el invoice que abre tu canal.
 
 ### Requisitos de Software
 

@@ -177,7 +177,7 @@ Anota tu semilla y guárdala en un lugar seguro/secreto (**MUY IMPORTANTE ANTES 
 docker exec -it phoenixd cat /phoenix/.phoenix/seed.dat
 ```
 
-También puedes verla después en la app, en **Configuración** → **Bitcoin y Wallet** → **SEED de Lightning**.
+También puedes verla después en la app, en **Configuración** → **Bitcoin y billetera** → **Frase semilla (SEED) de Lightning**.
 
 # Paso 6: Configura phoenixd para liquidez entrante
 

@@ -27,7 +27,7 @@ Puedes reembolsar una orden pagada si tu rol tiene el permiso **Reembolsar órde
 
 ### Bitcoin (Lightning)
 
-La ventana muestra el **Monto a reembolsar** en sats. Pídele al cliente una factura Lightning por exactamente ese monto, pégala en **Invoice Lightning del cliente** y procesa el reembolso. Ambrosia paga la factura desde tu wallet.
+La ventana muestra el **Monto a reembolsar** en sats. Pídele al cliente un invoice Lightning por exactamente ese monto, pégalo en **Invoice Lightning del cliente** y procesa el reembolso. Ambrosia paga el invoice desde tu billetera.
 
 ### Efectivo
 

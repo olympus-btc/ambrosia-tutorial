@@ -25,5 +25,5 @@ Tu nodo abre su primer canal Lightning, con ACINQ, cuando recibe su primer pago.
 <OpenChannel />
 
 :::tip
-¿Necesitas más liquidez entrante después? En **Configuración** → **Bitcoin y Wallet** → **Lightning Network**, haz clic en **Gestionar Auto Liquidez**, confirma tu contraseña de wallet y activa **Auto Liquidez**. Tu nodo abrirá canales automáticamente cuando necesite liquidez entrante, y se aplican comisiones on-chain cada vez.
+¿Necesitas más liquidez entrante después? En **Configuración** → **Bitcoin y billetera** → **Lightning Network**, haz clic en **Gestionar Auto Liquidez**, confirma la contraseña de la billetera y activa **Auto Liquidez**. Tu nodo abrirá canales automáticamente cuando necesite liquidez entrante, y se aplican comisiones on-chain cada vez.
 :::
