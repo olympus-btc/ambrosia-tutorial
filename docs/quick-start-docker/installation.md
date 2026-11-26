@@ -11,6 +11,7 @@ slug: /quick-installation-docker
 - **RAM**: 4GB minimum, 8GB recommended
 - **Disk Space**: 2GB free space
 - **Network**: Internet connection
+- **Ports**: 80 and 443 free on this computer
 
 # Step 1: Install dependencies (Docker, git & curl)
 
@@ -151,13 +152,22 @@ git pull
 docker-compose up --build -d
 ```
 
+## Prepare a New Installation
+
+Skip this when you update. With Ambrosia 0.11.1-beta, a new installation needs its data volume to belong to user ID 1000 before the first start; otherwise Docker creates it owned by root and `ambrosia` restarts over and over. Create the containers and volumes without starting them, then change the owner:
+
+```bash
+docker-compose up --no-start
+docker run --rm -v ambrosia_ambrosia_datadir:/data --user root --entrypoint sh ambrosia -c "chown -R 1000:1000 /data"
+```
+
+**The first command builds the images and may take 3-5 minutes**, especially on slower internet connections.
+
 ## Start Ambrosia
 
 ```bash
 docker-compose up -d --wait && docker-compose restart
 ```
-
-**This process may take 3-5 minutes on first run**, especially on slower internet connections. Subsequent starts will be much faster.
 
 # Step 5: Back up your seed words
 
@@ -208,8 +218,9 @@ They are not refundable.
 # Step 8: Access Ambrosia
 
 1. Open your web browser (Chrome, Firefox, Safari, Edge, etc.)
-2. Navigate to: **http://localhost:3000**
-3. You should see the Ambrosia onboarding screen
+2. Navigate to: **https://localhost**
+3. Your browser warns that the connection isn't private, because Ambrosia uses its own local certificate. Accept the warning to continue; in most browsers the option is under Advanced.
+4. You should see the Ambrosia onboarding screen
 
 :::warning
 You may need to turn off your VPN if page is not loading
