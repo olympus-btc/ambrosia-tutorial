@@ -11,13 +11,12 @@ slug: /quick-installation-native
 Before proceeding, ensure you have the following dependencies installed. You can verify them with these commands:
 
 - **Node.js (v22+):** `node -v`
-- **npm (v10+):** `npm -v`
 - **JDK/JRE (v21):** `java -version`
 
 The installation script also needs `curl`, `unzip`, `tar`, `sha256sum` and `gpg`. It checks them itself and stops if one is missing.
 
 :::warning
-If you are missing any of these, please refer to the [Detailed Dependencies Guide](https://github.com/olympus-btc/ambrosia/blob/v0.9.0-beta/doc/dependencies.md).
+If you are missing any of these, please refer to the [Detailed Dependencies Guide](https://github.com/olympus-btc/ambrosia/blob/v0.11.1-beta/doc/dependencies.md).
 :::
 
 ## 2. Installation
@@ -28,12 +27,12 @@ The installation script requires **sudo** privileges to install binaries to `/us
 
 *Automatic installation (includes systemd services):*
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/install.sh | bash -s -- --yes
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/install.sh | bash -s -- --yes
 ```
 
 *Automatic installation (without systemd services):*
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/install.sh | bash -s -- --yes --no-service
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/install.sh | bash -s -- --yes --no-service
 ```
 
 :::tip
@@ -47,7 +46,7 @@ If you prefer to review the script before running it, or if you want an **intera
 *Download the script and make it executable:*
 
 ```bash
-wget -q https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/install.sh
+wget -q https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/install.sh
 chmod +x install.sh
 ```
 
@@ -77,11 +76,11 @@ ambrosia-client
 ```
 :::
 
-Once both services are running (either via systemd or manually), you can access the **Ambrosia Dashboard** at:
+Once the three services are running (either via systemd or manually), you can access the **Ambrosia Dashboard** at:
 
 👉 [http://localhost:3000](http://localhost:3000)
 
-The Phoenixd installation script installs Phoenixd automatically. The script downloads Phoenixd v0.9.0, verifies the package integrity using GPG and checksums, installs it in `/usr/local/bin`, and optionally configures a systemd service for automatic startup.
+The Phoenixd installation script installs Phoenixd automatically. The script downloads Phoenixd v0.9.1, verifies the package integrity using GPG and checksums, installs it in `/usr/local/bin`, and optionally configures a systemd service for automatic startup.
 
 Check [Mastering Phoenixd](https://btcgdl.github.io/Mastering-phoenixd/) for more details.
 
@@ -94,5 +93,5 @@ To update Ambrosia later, see [Updating Ambrosia](../tutorials/updating.md).
 To uninstall Ambrosia POS and Phoenixd, run the following script:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/uninstall.sh | bash
 ```

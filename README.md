@@ -32,12 +32,12 @@ npm run serve
 
 ## Updating the Ambrosia version
 
-The installation guides pin the Ambrosia release they describe, currently `0.9.0-beta`, in download links, release file names and install script URLs, in both languages. When a new release ships:
+The installation guides pin the Ambrosia release they describe, currently `0.11.1-beta`, in download links, release file names and install script URLs, in both languages. When a new release ships:
 
 1. List the files that mention the current version:
 
    ```bash
-   grep -rl "0.9.0-beta" docs i18n README.md
+   grep -rl "0.11.1-beta" docs i18n README.md
    ```
 
 2. Replace it with the new version in those files. Leave mentions of past versions as they are, such as "before 0.11.0-beta" in the Docker hardening guide: they say when something changed, not which version the guides describe.

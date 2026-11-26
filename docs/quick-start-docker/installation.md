@@ -118,7 +118,7 @@ cd ambrosia
 ```
 
 :::info
-The `main` branch always matches the latest Ambrosia release (v0.9.0-beta when this guide was written).
+The `main` branch always matches the latest Ambrosia release (v0.11.1-beta when this guide was written).
 :::
 
 ## Verify the Files

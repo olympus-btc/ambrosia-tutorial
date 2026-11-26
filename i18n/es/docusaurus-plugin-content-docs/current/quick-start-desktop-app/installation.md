@@ -7,24 +7,24 @@ slug: /quick-installation-desktop-app
 # Instalación
 
 ## Requisitos Mínimos
-- **SO**: Linux (Ubuntu 20.04+, Debian 10+, Fedora 32+), macOS 13.5+ (Ventura), o Windows 10/11
+- **SO**: Linux (una versión que tu distribución todavía soporte, como Ubuntu 22.04+, Debian 12+ o un Fedora vigente), macOS 13.5+ (Ventura), o Windows 10/11
 - **RAM**: 2GB mínimo, 4GB recomendado
 - **Espacio en Disco**: 2GB de espacio libre
 - **Red**: Conexión a internet
 
 # Paso 1: Descarga Ambrosia para tu Sistema Operativo
 
-1. Ve aquí: https://github.com/olympus-btc/ambrosia/releases/tag/v0.9.0-beta
+1. Ve aquí: https://github.com/olympus-btc/ambrosia/releases/tag/v0.11.1-beta
 2. Desplázate hasta **Assets** y descarga el archivo de tu sistema operativo:
 
 | Sistema operativo | Archivo |
 | --- | --- |
-| Ubuntu/Debian | `ambrosia-pos_0.9.0-beta_amd64.deb` (ARM: `ambrosia-pos_0.9.0-beta_arm64.deb`) |
-| Fedora | `ambrosia-pos-0.9.0-beta.x86_64.rpm` (ARM: `ambrosia-pos-0.9.0-beta.aarch64.rpm`) |
-| Arch Linux y otras distribuciones (tar.gz) | `ambrosia-pos-0.9.0-beta-x64.tar.gz` (ARM: `ambrosia-pos-0.9.0-beta-arm64.tar.gz`) |
-| macOS (Apple Silicon) | `ambrosia-pos-0.9.0-beta-arm64.dmg` |
-| macOS (Intel) | `ambrosia-pos-0.9.0-beta-x64.dmg` |
-| Windows | `ambrosia-pos-0.9.0-beta-x64-setup.exe` (ARM: `ambrosia-pos-0.9.0-beta-arm64-setup.exe`) |
+| Ubuntu/Debian | `ambrosia-pos_0.11.1-beta_amd64.deb` (ARM: `ambrosia-pos_0.11.1-beta_arm64.deb`) |
+| Fedora | `ambrosia-pos-0.11.1-beta.x86_64.rpm` (ARM: `ambrosia-pos-0.11.1-beta.aarch64.rpm`) |
+| Arch Linux y otras distribuciones (tar.gz) | `ambrosia-pos-0.11.1-beta-x64.tar.gz` (ARM: `ambrosia-pos-0.11.1-beta-arm64.tar.gz`) |
+| macOS (Apple Silicon) | `ambrosia-pos-0.11.1-beta-arm64.dmg` |
+| macOS (Intel) | `ambrosia-pos-0.11.1-beta-x64.dmg` |
+| Windows | `ambrosia-pos-0.11.1-beta-x64-setup.exe` (ARM: `ambrosia-pos-0.11.1-beta-arm64-setup.exe`) |
 
 # Paso 2: Instala Ambrosia en tu Sistema Operativo
 
@@ -37,7 +37,7 @@ cd Downloads
 ```
 3. Instala Ambrosia (en computadoras ARM, usa el archivo `arm64`)
 ```
-sudo apt install ./ambrosia-pos_0.9.0-beta_amd64.deb
+sudo apt install ./ambrosia-pos_0.11.1-beta_amd64.deb
 ```
 4. Ve a tus aplicaciones y abre AmbrosiaPoS
 
@@ -51,7 +51,7 @@ cd Downloads
 ```
 3. Instala Ambrosia (en computadoras ARM, usa el archivo `aarch64`)
 ```
-sudo dnf install ./ambrosia-pos-0.9.0-beta.x86_64.rpm
+sudo dnf install ./ambrosia-pos-0.11.1-beta.x86_64.rpm
 ```
 
 :::info
@@ -68,22 +68,22 @@ Este archivo tar.gz está disponible para usuarios avanzados en distribuciones L
 
 ### 1. Extrae el archivo
 
-Esto crea la carpeta `ambrosia-pos-0.9.0-beta-x64` (`ambrosia-pos-0.9.0-beta-arm64` en computadoras ARM):
+Esto crea la carpeta `ambrosia-pos-0.11.1-beta-x64` (`ambrosia-pos-0.11.1-beta-arm64` en computadoras ARM):
 
 ```bash
-tar -xzf ambrosia-pos-0.9.0-beta-x64.tar.gz
+tar -xzf ambrosia-pos-0.11.1-beta-x64.tar.gz
 ```
 
 ### 2. Mueve a una ubicación permanente (opcional)
 
 **Instalación para todo el sistema:**
 ```bash
-sudo mv ambrosia-pos-0.9.0-beta-x64 /opt/AmbrosiaPoS
+sudo mv ambrosia-pos-0.11.1-beta-x64 /opt/AmbrosiaPoS
 ```
 
 **Instalación solo para el usuario:**
 ```bash
-mv ambrosia-pos-0.9.0-beta-x64 ~/.local/share/AmbrosiaPoS
+mv ambrosia-pos-0.11.1-beta-x64 ~/.local/share/AmbrosiaPoS
 ```
 
 ### 3. Ejecuta la aplicación

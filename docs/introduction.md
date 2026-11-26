@@ -9,7 +9,7 @@ slug: /
 A tutorial to install, configure, and use Ambrosia (Point of Sale).
 
 :::info
-This tutorial covers Ambrosia [v0.9.0-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.9.0-beta).
+This tutorial covers Ambrosia [v0.11.1-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.11.1-beta).
 :::
 
 ## What is Ambrosia?

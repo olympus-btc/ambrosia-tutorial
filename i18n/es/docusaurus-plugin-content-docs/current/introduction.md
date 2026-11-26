@@ -9,7 +9,7 @@ slug: /
 Un tutorial para instalar Ambrosia (Punto de Venta), configurarlo y usarlo.
 
 :::info
-Este tutorial cubre Ambrosia [v0.9.0-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.9.0-beta).
+Este tutorial cubre Ambrosia [v0.11.1-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.11.1-beta).
 :::
 
 ## ¿Qué es Ambrosia?

@@ -44,7 +44,7 @@ docker-compose up -d --wait && docker-compose restart
 El script de actualización reemplaza phoenixd, el servidor de Ambrosia y el cliente por sus últimos releases, y reinicia los servicios systemd si los usas:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/update.sh | bash -s -- --yes
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/update.sh | bash -s -- --yes
 ```
 
 - Sin `--yes`, el script pregunta antes de cada paso.
@@ -52,7 +52,7 @@ curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9
 - El script actualiza phoenixd a su último release. Para mantener una versión específica, define `PHOENIXD_TAG`:
 
   ```bash
-  curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/update.sh | PHOENIXD_TAG=0.9.0 bash -s -- --yes
+  curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/update.sh | PHOENIXD_TAG=0.9.1 bash -s -- --yes
   ```
 
 Si no usas los servicios systemd, detén phoenixd, el servidor y el cliente antes de actualizar, y vuelve a iniciarlos después.

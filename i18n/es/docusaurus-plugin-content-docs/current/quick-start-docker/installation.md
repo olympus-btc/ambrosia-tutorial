@@ -118,7 +118,7 @@ cd ambrosia
 ```
 
 :::info
-La rama `main` siempre corresponde al último release de Ambrosia (v0.9.0-beta cuando se escribió esta guía).
+La rama `main` siempre corresponde al último release de Ambrosia (v0.11.1-beta cuando se escribió esta guía).
 :::
 
 ## Verifica los Archivos
