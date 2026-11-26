@@ -20,6 +20,8 @@ El turno queda abierto hasta que alguien lo cierra. Abrir uno requiere el permis
 
 Mientras hay un turno abierto, aparece el botón **Turno activo** en la esquina inferior derecha de la pantalla. Haz clic en él para ver cuándo se abrió el turno, el **Total de ventas**, el **Total de tickets** y el **Efectivo al abrir turno**.
 
+Si una impresora tiene caja de dinero, **Abrir caja** la abre sin una venta, por ejemplo para dar cambio. Necesita el permiso **Abrir caja de dinero**. La caja también puede abrirse sola al abrir o cerrar un turno (consulta [Caja de Dinero](./store-settings.md#caja-de-dinero)).
+
 ## Cerrar un Turno
 
 1. Haz clic en **Turno activo** y luego en **Cerrar turno**.
@@ -32,11 +34,11 @@ Mientras hay un turno abierto, aparece el botón **Turno activo** en la esquina 
 
 ### Corte Z
 
-La ventana de cierre también muestra el **Corte Z**: el período del turno, los totales y el desglose **Por método de pago**. Si configuraste una impresora de recibos para clientes, haz clic en **Imprimir Corte Z** para imprimirlo antes de cerrar el turno.
+La ventana de cierre también muestra el **Corte Z**: el período del turno, los totales y el desglose **Por método de pago**. Con una impresora de recibos configurada, **Imprimir Corte Z al cerrar** viene marcado, así que el Corte Z se imprime cuando cierras el turno. Usa la plantilla predeterminada de **Corte Z** (consulta [Plantillas de Ticket](./store-settings.md#plantillas-de-ticket)).
 
 ## Consultar Turnos Anteriores
 
 Ve a [**Reportes**](./reports.md) y abre la pestaña **Turnos**. Para el período seleccionado ves cada turno con su usuario, **Apertura**, **Cierre**, **Monto Inicial**, **Monto Final** y **Diferencia**, además de los totales y una gráfica de **Diferencia por Día**.
 
-- Haz clic en **Detalles** para ver un turno.
+- Haz clic en **Detalles** para ver un turno. Con una impresora de recibos configurada, **Reimprimir Corte Z** vuelve a imprimir el Corte Z de un turno cerrado; necesita el permiso **Abrir turnos**.
 - Haz clic en **Exportar CSV** para descargar la lista.
