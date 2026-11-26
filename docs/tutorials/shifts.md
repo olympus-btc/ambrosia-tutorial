@@ -20,6 +20,8 @@ The shift stays open until someone closes it. Opening one requires the **Open sh
 
 While a shift is open, an **Active shift** button appears in the bottom-right corner of the screen. Click it to see when the shift was opened, the **Total sales**, the **Total tickets** and the **Opening cash**.
 
+If a printer has a cash drawer, **Open cash drawer** opens it without a sale, for example to give change. It needs the **Open cash drawer** permission. The drawer can also open by itself when you open or close a shift (see [Cash Drawer](./store-settings.md#cash-drawer)).
+
 ## Close a Shift
 
 1. Click **Active shift** and then **Close shift**.
@@ -32,11 +34,11 @@ While a shift is open, an **Active shift** button appears in the bottom-right co
 
 ### Z Report
 
-The close window also shows the **Z Report**: the shift period, the totals and the breakdown **By payment method**. If you set up a customer receipt printer, click **Print Z Report** to print it before closing the shift.
+The close window also shows the **Z Report**: the shift period, the totals and the breakdown **By payment method**. With a receipt printer set up, **Print Z Report when closing** is checked, so the Z report prints when you close the shift. It uses the default **Z report** template (see [Ticket Templates](./store-settings.md#ticket-templates)).
 
 ## Review Past Shifts
 
 Go to [**Reports**](./reports.md) and open the **Shifts** tab. For the selected period you see each shift with its user, **Opened** and **Closed** times, **Initial Amount**, **Final Amount** and **Difference**, plus the totals and a **Difference by Day** chart.
 
-- Click **Details** to see a single shift.
+- Click **Details** to see a single shift. With a receipt printer set up, **Reprint Z Report** prints the Z report of a closed shift again; it needs the **Open shifts** permission.
 - Click **Export CSV** to download the list.

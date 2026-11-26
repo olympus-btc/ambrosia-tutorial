@@ -17,22 +17,22 @@ Todo lo que ves en la página sigue el período seleccionado.
 
 **Órdenes** es la pestaña que abre primero. Muestra tus ventas orden por orden.
 
-- **Resumen** muestra **Ingresos Totales**, **Órdenes**, **Ticket Promedio** y el promedio de productos por orden. Si hubo descuentos o reembolsos en el período, también muestra **Total de Descuentos**, **Total Reembolsado** e **Ingreso Neto** (los ingresos menos los reembolsos).
+- **Resumen** muestra **Ingresos Totales**, **Órdenes**, **Ticket Promedio** y el promedio de productos por orden. Si hubo descuentos, reembolsos o comisiones de liquidez Lightning en el período, también muestra **Total de Descuentos**, **Total Reembolsado**, **Ingreso Neto** (los ingresos menos los reembolsos) y **Total de Comisiones de Liquidez Lightning**.
 - **Analítica** muestra las gráficas **Ingresos por Día**, **Órdenes por Día** y **Usuarios con Más Órdenes**.
-- La lista de órdenes se puede filtrar con **Buscar**, por producto, y con **Método de Pago**. Haz clic en **Detalles** en una orden para ver sus productos, su descuento y su total en **Detalle de Orden**.
+- La lista de órdenes se puede filtrar con **Buscar**, por producto, y con **Método de Pago**. Haz clic en **Detalles** en una orden para ver sus productos, su descuento, su total y, si la hubo, la **Comisión de Lightning Network** en **Detalle de Orden**.
 
 ## Pestaña Productos
 
 **Productos** muestra tus ventas producto por producto.
 
-- **Resumen** muestra **Ingresos Totales**, **Productos Vendidos**, **Líneas de Producto** y **Productos Únicos**. Si hubo pagos en bitcoin o reembolsos, también muestra **Total Bitcoin**, **Total Reembolsado**, **Total Reembolsado (Bitcoin)** e **Ingreso Neto**.
+- **Resumen** muestra **Ingresos Totales**, **Productos Vendidos**, **Líneas de Producto** y **Productos Únicos**. Si hubo pagos en bitcoin, reembolsos o comisiones de liquidez Lightning, también muestra **Total Bitcoin**, **Total Reembolsado**, **Total Reembolsado (Bitcoin)**, **Ingreso Neto** y **Total de Comisiones de Liquidez Lightning**.
 - **Analítica** muestra las gráficas **Ingresos por Día**, **Top Productos por Ingresos** y **Distribución de Métodos de Pago**.
-- **Detalle de Ventas** lista cada producto vendido, y también se puede filtrar con **Buscar** y **Método de Pago**.
+- **Detalle de Ventas** lista cada producto vendido, con la **Comisión de Lightning Network** de las ventas que la tuvieron, y también se puede filtrar con **Buscar** y **Método de Pago**.
 
 ## Pestaña Turnos
 
-La pestaña **Turnos** solo aparece si tu rol puede ver el reporte de turnos, algo que los roles de administrador pueden hacer por defecto. Muestra los turnos del período y sus diferencias de caja; consulta [Consultar Turnos Anteriores](./shifts.md#consultar-turnos-anteriores).
+La pestaña **Turnos** solo aparece si tu rol tiene el permiso **Ver reporte de turnos**, que los roles de administrador tienen por defecto. Muestra los turnos del período y sus diferencias de caja; consulta [Consultar Turnos Anteriores](./shifts.md#consultar-turnos-anteriores).
 
 ## Exportar a CSV
 
-La lista de órdenes, **Detalle de Ventas** y la lista de turnos tienen cada una un botón **Exportar CSV**. Descarga la lista como un archivo CSV que puedes abrir en una hoja de cálculo.
+La lista de órdenes, **Detalle de Ventas** y la lista de turnos tienen cada una un botón **Exportar CSV**. Descarga la lista como un archivo CSV que puedes abrir en una hoja de cálculo. Las exportaciones de la lista de órdenes y de **Detalle de Ventas** incluyen una columna con la comisión de Lightning Network.

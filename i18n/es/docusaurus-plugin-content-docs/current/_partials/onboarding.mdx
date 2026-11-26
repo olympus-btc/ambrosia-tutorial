@@ -1,6 +1,6 @@
 ## Paso 1: Elegir el Tipo de Negocio
 
-La primera pantalla pregunta **¿Qué tipo de negocio tienes?**. **Tienda** ya viene seleccionada, así que haz clic en **Siguiente**. Restaurante y Freelancer aparecen como próximamente.
+La primera pantalla pregunta **¿Qué tipo de negocio tienes?**. **Tienda** ya viene seleccionada, así que haz clic en **Siguiente**. La otra opción, **Freelancer**, es para un profesional independiente que factura por tiempo y proyectos a sus clientes, y este tutorial no la cubre.
 
 :::info
 ¿Vienes de otra instalación de Ambrosia? Haz clic en **¿Estás restaurando un respaldo anterior?** en esta pantalla para restaurar un archivo de respaldo exportado desde ella en lugar de empezar desde cero (consulta [Respaldo y Restauración](../tutorials/backup-and-restore.md)).
@@ -17,16 +17,16 @@ Admin
 
 **Contraseña** y **Confirmar Contraseña**
 
-Protege el acceso a la wallet. Debe tener al menos 8 caracteres e incluir mayúsculas, minúsculas, números y caracteres especiales.
+Protege el acceso a la billetera y también tus secretos, si los cifras en el paso 5. Debe tener al menos 8 caracteres e incluir mayúsculas, minúsculas, números y caracteres especiales.
 ```
 Ambrosia2026!
 ```
 
 **PIN**
 
-Los 4 dígitos con los que inicias sesión en la app.
+Los 6 dígitos con los que inicias sesión en la app.
 ```
-0000
+000000
 ```
 
 ## Paso 3: Ingresar los Datos de tu Tienda
@@ -58,7 +58,7 @@ Ambrosia también puede recibir pagos con **Nostr Wallet Connect** (cualquier wa
 
 ## Paso 5: Agregar Seguridad Extra (Opcional)
 
-Si marcas **Cifrar la contraseña de phoenixd, la conexión NWC y la clave de notificaciones con una contraseña**, esos secretos quedan protegidos con una **Contraseña de desbloqueo**. Anótala en un lugar seguro: no se puede recuperar y es posible que te la pida de nuevo cuando la app se reinicie. Mientras esté bloqueado, la app te pide desbloquearlo en **Configuración** → **Bitcoin y Wallet** → **Cifrado de secretos** (consulta [Configuración de Lightning](../tutorials/lightning-settings.md#cifrado-de-secretos)).
+Si marcas **Cifrar la contraseña de phoenixd, la conexión NWC y la clave de notificaciones con una contraseña**, esos secretos quedan protegidos con la contraseña de la billetera, la que creaste en el paso 2. Si alguna vez la pierdes, no hay forma de recuperarlos. Es posible que te la pida de nuevo cuando la app se reinicie: mientras los secretos estén bloqueados, la app te pide desbloquearlos en **Configuración** → **Bitcoin y billetera** → **Cifrado de secretos** (consulta [Configuración de Lightning](../tutorials/lightning-settings.md#cifrado-de-secretos)).
 
 Puedes dejarla sin marcar y activarla después desde **Configuración**.
 
@@ -69,5 +69,5 @@ Revisa el **Resumen de tu configuración**, usa **Editar** para corregir cualqui
 ## Primer Inicio de Sesión
 
 1. En **Seleccionar Empleado**, elige tu usuario.
-2. Ingresa tu PIN de 4 dígitos.
+2. Ingresa tu PIN de 6 dígitos.
 3. Haz clic en **Iniciar Sesión**.

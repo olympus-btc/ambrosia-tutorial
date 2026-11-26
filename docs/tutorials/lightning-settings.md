@@ -41,18 +41,19 @@ If your NWC wallet stops working with Ambrosia, go to **Settings** → **Bitcoin
 
 ## Secrets Encryption
 
-Ambrosia stores the phoenixd password, the NWC connection and the push notification key. **Secrets encryption** protects them with an **Unlock password** that only you know.
+Ambrosia stores the phoenixd password, the NWC connection and the push notification key. **Secrets encryption** protects them with your wallet password.
 
 To turn it on, check the encryption option in step 5 of the setup, or later:
 
 1. Go to **Settings** → **Bitcoin & Wallet** → **Secrets encryption** and click **Manage encryption**.
-2. Enter an **Unlock password** and click **Activate encryption**.
+2. Enter your **Wallet password** and click **Enter**.
+3. Click **Activate encryption**.
 
-Write the unlock password down somewhere safe: it can't be recovered, and neither can the secrets it protects.
+If you ever lose the wallet password, there's no way to recover these secrets.
 
-When the Ambrosia server restarts, the secrets are locked again until someone enters the unlock password. While they're locked, choosing BTC at checkout turns the pay button into **Unlock**, which asks for the unlock password. You can also unlock them ahead of time: go to **Settings** → **Bitcoin & Wallet** → **Secrets encryption**, click **Manage encryption**, enter the **Unlock password** and click **Unlock**.
+When the Ambrosia server restarts, the secrets are locked again until someone enters the wallet password. While they're locked, choosing **Bitcoin (Lightning)** at checkout turns the pay button into **Unlock**, which asks for it. You can also unlock them ahead of time: go to **Settings** → **Bitcoin & Wallet** → **Secrets encryption**, click **Manage encryption**, enter your **Wallet password** and click **Enter**, then type it again in **Unlock password** and click **Unlock**.
 
-In the Desktop App, check **Remember on this device** to save the unlock password in your system's keyring, so Ambrosia unlocks the secrets by itself when it starts.
+In the Desktop App, check **Remember on this device** before you click **Activate encryption** to save the wallet password in your system's keyring, so Ambrosia unlocks the secrets by itself when it starts.
 
 ## Auto Liquidity (Desktop App)
 
@@ -65,6 +66,6 @@ Auto Liquidity isn't available with Nostr Wallet Connect.
 Some changes, such as going back to the local phoenixd node, need a restart. In Docker, and in Native with the systemd services, go to **Settings** → **System**:
 
 - **Restart server** restarts the Ambrosia server. Open sessions are briefly interrupted.
-- **Restart phoenixd** restarts the local Lightning node. It only appears when Ambrosia uses its local phoenixd.
+- **Restart phoenixd** restarts the local Lightning node. It only appears in Native, when Ambrosia uses its local phoenixd. In Docker, run `docker restart phoenixd` instead.
 
 Click the button, then **Restart** to confirm. If the card says **Restart is not available for this installation**, restart Ambrosia yourself: close and reopen the Desktop App, or stop and start the server in a Native install without services.

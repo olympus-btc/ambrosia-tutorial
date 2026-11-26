@@ -30,7 +30,8 @@ En **Moneda**, **Cambiar moneda** define la moneda de tus precios. Cambiarla no 
 1. En **Propinas**, activa **Habilitar propinas**.
 2. En **Porcentajes sugeridos**, haz clic en los porcentajes que quieres ofrecer al cobrar. Al inicio son 10 %, 15 % y 20 %.
 3. Para ofrecer otro, haz clic en **Personalizado**, ingresa el porcentaje y haz clic en **Agregar**.
-4. Haz clic en **Guardar**.
+4. En **Tipo predeterminado de propina personalizada**, elige si **Otra**, al cobrar, se abre en porcentaje (**%**) o en monto fijo (**$**).
+5. Haz clic en **Guardar**.
 
 Al cobrar, la sección **Propina** muestra estos porcentajes, además de **Sin propina** y **Otra** para cualquier otro porcentaje o monto.
 
@@ -43,29 +44,34 @@ Estas dos opciones se guardan en el dispositivo y el navegador que estás usando
 
 ## Impresión
 
-Ambrosia imprime el recibo del cliente automáticamente después de cada venta pagada, en una impresora térmica de recibos (ESC/POS). Para eso necesita una plantilla de ticket y una impresora que la use.
+Ambrosia imprime el recibo del cliente automáticamente después de cada venta pagada, y el Corte Z cuando cierras un turno, en una impresora térmica de recibos (ESC/POS). Para eso necesita una impresora y, para cada tipo de ticket, una plantilla predeterminada.
 
 ### Plantillas de Ticket
 
-Un ticket no tiene contenido hasta que le das una plantilla.
+Un ticket no tiene contenido hasta que le das una plantilla. Cada plantilla es para un **Tipo de ticket**: **Recibo de venta** o **Corte Z**.
 
 1. En **Plantillas de ticket**, haz clic en **Agregar**.
-2. Ingresa el **Nombre de la plantilla**.
+2. Ingresa el **Nombre de la plantilla** y elige el **Tipo de ticket**.
 3. Haz clic en **Agregar elemento** por cada parte del ticket y elige su **Tipo**:
 
    | Tipo | Qué imprime |
    | --- | --- |
    | **Encabezado**, **Texto**, **Pie** | El **Valor** que ingresas |
-   | Salto de línea | Una línea vacía |
+   | **Salto de línea** | Una línea vacía |
    | **Separador** | El **Valor** repetido a lo ancho del ticket, por ejemplo `-` |
    | **Encabezado tabla** | El **Valor**, por ejemplo `Cant  Producto  Precio` |
    | **Fila tabla** | Una línea por producto vendido, con su cantidad y su precio |
    | **Fila de total** | El descuento y la propina, si los hay, y el total |
-   | Código QR | Un código QR del **Valor** |
+   | **Fila de método de pago** | Cómo se pagó la venta |
+   | **Código QR** | Un código QR del **Valor** |
+   | **Logo** | El **Logo del negocio** o una **Imagen propia** en PNG o JPEG, que eliges en **Origen del logo**. Un logo del negocio en WebP no se puede imprimir. |
+   | **Resumen del turno** | Los totales del turno, para un Corte Z |
 
-4. Para imprimir los datos de tu tienda, haz clic en el botón de llaves junto a **Valor** y elige un campo en **Información del negocio**: **Nombre**, **Dirección**, **Teléfono** o **Email**.
-5. Ajusta la alineación, el tamaño y la **Negrita** de cada elemento. **Vista previa** muestra cómo se ve el ticket.
+4. Para imprimir datos como el nombre de tu tienda, la fecha o los totales del turno, haz clic en el botón junto a **Valor** y elige un campo en **Variables**.
+5. Ajusta la **Alineación**, el **Tamaño** y la **Negrita** de cada elemento. El **Formato de fecha** y el **Formato de hora** de la plantilla definen cómo se imprimen las fechas. **Vista previa** muestra cómo se ve el ticket.
 6. Haz clic en **Crear**.
+
+Cada tipo de ticket se imprime con su plantilla predeterminada, y un tipo sin plantilla no se imprime. Para elegirla, selecciona la plantilla en **Plantillas** y haz clic en **Usar como predeterminada**: desde ahí muestra **Predeterminada**.
 
 Para cambiar una plantilla, elígela en **Plantillas**, edítala y haz clic en **Guardar**. Con una impresora configurada, **Imprimir prueba** imprime la plantilla con datos de ejemplo.
 
@@ -73,12 +79,22 @@ Para cambiar una plantilla, elígela en **Plantillas**, edítala y haz clic en *
 
 La lista de impresoras muestra las impresoras instaladas en la computadora donde corre Ambrosia. Instala ahí tu impresora de recibos primero.
 
-1. En **Agregar impresora**, elige la **Impresora** y la **Plantilla**. El **Tipo** es **Cliente**, la impresora de recibos.
+1. En **Agregar impresora**, elige el **Tipo** y la **Impresora**. La impresora de recibos es del tipo **Cliente**.
 2. Haz clic en **Agregar**. La impresora aparece en **Impresoras configuradas**.
 
-En cada impresora configurada puedes cambiar su **Plantilla**, activar o desactivar **Impresora por defecto** y **Habilitada**, o hacer clic en **Eliminar**. El recibo se imprime en la impresora por defecto, que debe estar habilitada.
+En cada impresora configurada puedes activar o desactivar **Impresora por defecto** y **Habilitada**, o hacer clic en **Eliminar**. Los recibos y los Cortes Z se imprimen en la impresora **Cliente** por defecto, que debe estar habilitada. La plantilla de cada ticket se elige en [Plantillas de Ticket](#plantillas-de-ticket), no en la impresora.
 
-La misma impresora imprime el **Corte Z** cuando cierras un turno (consulta [Turnos](./shifts.md)).
+### Caja de Dinero
+
+Si tu caja de dinero está conectada a la impresora de recibos, Ambrosia puede abrirla. En la impresora, dentro de **Impresoras configuradas**:
+
+1. Activa **Caja de dinero conectada**.
+2. Elige el **Pin de la caja**. La mayoría de las cajas usan el **Pin 2**; si la tuya no abre, prueba el **Pin 5**.
+3. En **Abrir al cobrar con**, marca los métodos de pago que abren la caja cuando se paga una venta, como el efectivo.
+4. **Abrir en reembolsos** la abre cuando reembolsas una orden pagada con uno de esos métodos. **Abrir al abrir turno** y **Abrir al cerrar turno** la abren con el turno (consulta [Turnos](./shifts.md)). Desactiva los que no quieras.
+5. Haz clic en **Probar caja** para comprobarla.
+
+Los cambios se guardan en cuanto los haces. Para abrir la caja sin una venta, por ejemplo para dar cambio, usa **Abrir caja** en el turno activo (consulta [Revisar el Turno Activo](./shifts.md#revisar-el-turno-activo)).
 
 ## Notificaciones
 

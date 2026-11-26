@@ -8,7 +8,7 @@ sidebar_position: 4
 Los nuevos releases de Ambrosia traen funciones y arreglos de seguridad, así que mantén tu instalación al día. Cómo actualizar depende de cómo la instalaste.
 
 :::warning[Antes de actualizar]
-Respalda tu frase de recuperación (**Configuración** → **Bitcoin y Wallet** → **SEED de Lightning**) y exporta los datos de tu tienda (**Configuración** → **Backup y datos**, consulta [Respaldo y Restauración](./backup-and-restore.md)), por si algo sale mal.
+Respalda tu frase de recuperación (**Configuración** → **Bitcoin y billetera** → **Frase semilla (SEED) de Lightning**) y exporta los datos de tu tienda (**Configuración** → **Respaldo y datos**, consulta [Respaldo y Restauración](./backup-and-restore.md)), por si algo sale mal.
 :::
 
 ## App de Escritorio
@@ -21,6 +21,14 @@ La app busca actualizaciones al abrirse y cada 6 horas. También puedes buscarla
 Los menús y avisos de actualización de la app de escritorio solo están en inglés.
 
 ## Docker
+
+:::warning[¿Actualizas desde una versión anterior a 0.11.0-beta?]
+Tus volúmenes necesitan una migración que se hace una sola vez, porque el contenedor `ambrosia` ahora corre con otro usuario. Sigue [Seguridad en Docker](../advanced/docker-hardening.md#migrar-tus-volúmenes) en lugar de estos comandos.
+:::
+
+:::info
+Desde 0.11.0-beta, Ambrosia se abre en **https://localhost** en lugar de `http://localhost:3000`, y Docker necesita los puertos 80 y 443 libres en esta computadora (consulta el paso 8 de la [guía de instalación con Docker](../quick-start-docker/installation.md)).
+:::
 
 Desde tu carpeta `ambrosia`, trae el código más reciente y reconstruye las imágenes:
 
@@ -40,7 +48,7 @@ docker-compose up -d --wait && docker-compose restart
 El script de actualización reemplaza phoenixd, el servidor de Ambrosia y el cliente por sus últimos releases, y reinicia los servicios systemd si los usas:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/update.sh | bash -s -- --yes
+curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/update.sh | bash -s -- --yes
 ```
 
 - Sin `--yes`, el script pregunta antes de cada paso.
@@ -48,7 +56,7 @@ curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9
 - El script actualiza phoenixd a su último release. Para mantener una versión específica, define `PHOENIXD_TAG`:
 
   ```bash
-  curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.9.0-beta/scripts/update.sh | PHOENIXD_TAG=0.9.0 bash -s -- --yes
+  curl -fsSL https://raw.githubusercontent.com/olympus-btc/ambrosia/refs/tags/v0.11.1-beta/scripts/update.sh | PHOENIXD_TAG=0.9.1 bash -s -- --yes
   ```
 
 Si no usas los servicios systemd, detén phoenixd, el servidor y el cliente antes de actualizar, y vuelve a iniciarlos después.

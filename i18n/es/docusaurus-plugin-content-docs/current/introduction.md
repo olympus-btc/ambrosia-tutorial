@@ -9,7 +9,7 @@ slug: /
 Un tutorial para instalar Ambrosia (Punto de Venta), configurarlo y usarlo.
 
 :::info
-Este tutorial cubre Ambrosia [v0.9.0-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.9.0-beta).
+Este tutorial cubre Ambrosia [v0.11.1-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.11.1-beta).
 :::
 
 ## ¿Qué es Ambrosia?
@@ -40,8 +40,8 @@ Siguiendo este tutorial, podrás:
 - Funciona en Linux, Mac o (¡incluso!) Windows
 - Úsala para aprender, aunque ten en cuenta que necesitarás algo que puedas dejar encendido y conectado a internet 24/7 si realmente quieres usarlo en una tienda.
 
-### Wallet Lightning
-- Cualquier wallet Lightning, por ejemplo en tu teléfono, con al menos 5,000 sats para pagar la factura que abre tu canal.
+### Billetera Lightning
+- Cualquier billetera Lightning, por ejemplo en tu teléfono, con al menos 5,000 sats para pagar el invoice que abre tu canal.
 
 ### Requisitos de Software
 
@@ -63,7 +63,7 @@ Este tutorial está organizado en varias secciones:
 5. **Vender tu Producto** — Venta
 6. **Cerrar tu canal Lightning** — Cierre de canal
 
-Cuando ya estés en marcha, los [Tutoriales](./tutorials/index.md) cubren cada parte de Ambrosia a fondo.
+Cuando ya estés en marcha, los [Tutoriales](./tutorials/index.md) cubren cada parte de Ambrosia a fondo. Si instalas y mantienes la computadora donde corre Ambrosia, las guías de [Avanzado](./advanced/index.md) cubren el despliegue, el mantenimiento y la solución de problemas.
 
 ## ¿Listo para Comenzar?
 

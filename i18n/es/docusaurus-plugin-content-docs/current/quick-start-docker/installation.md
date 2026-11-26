@@ -11,6 +11,7 @@ slug: /quick-installation-docker
 - **RAM**: 4GB mínimo, 8GB recomendado
 - **Espacio en Disco**: 2GB de espacio libre
 - **Red**: Conexión a internet
+- **Puertos**: 80 y 443 libres en esta computadora
 
 # Paso 1: Instala dependencias (Docker, git y curl)
 
@@ -118,7 +119,7 @@ cd ambrosia
 ```
 
 :::info
-La rama `main` siempre corresponde al último release de Ambrosia (v0.9.0-beta cuando se escribió esta guía).
+La rama `main` siempre corresponde al último release de Ambrosia (v0.11.1-beta cuando se escribió esta guía).
 :::
 
 ## Verifica los Archivos
@@ -140,6 +141,10 @@ Ejecuta estos comandos desde el directorio `ambrosia`.
 
 ## Actualiza desde una Versión Anterior
 
+:::warning[¿Actualizas desde una versión anterior a 0.11.0-beta?]
+Tus volúmenes necesitan una migración que se hace una sola vez, porque el contenedor `ambrosia` ahora corre con otro usuario. Sigue [Seguridad en Docker](../advanced/docker-hardening.md#migrar-tus-volúmenes) en lugar de estos comandos.
+:::
+
 Sáltate esto si es una instalación nueva. Si ya usaste una versión anterior de Ambrosia con Docker, primero trae el código más reciente y reconstruye las imágenes:
 
 ```bash
@@ -147,13 +152,22 @@ git pull
 docker-compose up --build -d
 ```
 
+## Prepara una Instalación Nueva
+
+Sáltate esto si estás actualizando. Con Ambrosia 0.11.1-beta, una instalación nueva necesita que su volumen de datos pertenezca al ID de usuario 1000 antes del primer inicio; si no, Docker lo crea con dueño root y `ambrosia` se reinicia una y otra vez. Crea los contenedores y los volúmenes sin iniciarlos, y después cambia el dueño:
+
+```bash
+docker-compose up --no-start
+docker run --rm -v ambrosia_ambrosia_datadir:/data --user root --entrypoint sh ambrosia -c "chown -R 1000:1000 /data"
+```
+
+**El primer comando construye las imágenes y puede tardar 3-5 minutos**, especialmente con conexiones a internet lentas.
+
 ## Inicia Ambrosia
 
 ```bash
 docker-compose up -d --wait && docker-compose restart
 ```
-
-**Este proceso puede tardar 3-5 minutos en la primera ejecución**, especialmente con conexiones a internet lentas. Los inicios posteriores serán mucho más rápidos.
 
 # Paso 5: Respalda tus palabras semilla
 
@@ -163,7 +177,7 @@ Anota tu semilla y guárdala en un lugar seguro/secreto (**MUY IMPORTANTE ANTES 
 docker exec -it phoenixd cat /phoenix/.phoenix/seed.dat
 ```
 
-También puedes verla después en la app, en **Configuración** → **Bitcoin y Wallet** → **SEED de Lightning**.
+También puedes verla después en la app, en **Configuración** → **Bitcoin y billetera** → **Frase semilla (SEED) de Lightning**.
 
 # Paso 6: Configura phoenixd para liquidez entrante
 
@@ -204,8 +218,9 @@ No son reembolsables.
 # Paso 8: Accede a Ambrosia
 
 1. Abre tu navegador web (Chrome, Firefox, Safari, Edge, etc.)
-2. Navega a: **http://localhost:3000**
-3. Deberías ver la pantalla de onboarding de Ambrosia
+2. Navega a: **https://localhost**
+3. Tu navegador avisa que la conexión no es privada, porque Ambrosia usa su propio certificado local. Acepta el aviso para continuar; en la mayoría de los navegadores, la opción está en la configuración avanzada de esa página.
+4. Deberías ver la pantalla de onboarding de Ambrosia
 
 :::warning
 Es posible que debas desactivar tu VPN si la página no carga

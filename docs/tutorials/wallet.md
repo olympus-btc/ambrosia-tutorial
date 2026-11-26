@@ -13,7 +13,7 @@ The **Wallet** is where you see the balance of your Lightning node, receive and 
 2. In **Confirm Wallet Access**, enter your wallet password and click **Access**.
 
 :::info
-If secrets encryption is locked, unlock it first in **Settings** → **Secrets encryption**.
+If secrets encryption is locked, unlock it first in **Settings** → **Bitcoin & Wallet** → **Secrets encryption** (see [Lightning Settings](./lightning-settings.md#secrets-encryption)).
 :::
 
 ## Node Information
@@ -36,7 +36,7 @@ The **Lightning Invoice Generated** window shows the QR and the invoice, which y
 Use **Send** to move funds out of the POS, for example to your personal wallet.
 
 1. In the wallet that will receive the funds, create an invoice.
-2. Open the **Send** tab and paste the invoice in **Invoice BOLT11**, or click **Scan QR** to scan it.
+2. Open the **Send** tab and paste the invoice in **BOLT11 Invoice**, or click **Scan QR** to scan it.
 3. Click **Send Lightning Payment**.
 4. Review the amount and description in **Confirm Payment**. If the invoice has no amount, enter it in sats or in your currency.
 5. Click **Confirm Payment**.

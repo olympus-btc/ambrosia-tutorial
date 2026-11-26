@@ -104,6 +104,10 @@ const config = {
                 label: 'Tutorials',
                 to: '/tutorials',
               },
+              {
+                label: 'Advanced',
+                to: '/advanced',
+              },
             ],
           }
         ],

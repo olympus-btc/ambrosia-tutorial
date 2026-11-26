@@ -9,7 +9,7 @@ slug: /
 A tutorial to install, configure, and use Ambrosia (Point of Sale).
 
 :::info
-This tutorial covers Ambrosia [v0.9.0-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.9.0-beta).
+This tutorial covers Ambrosia [v0.11.1-beta](https://github.com/olympus-btc/ambrosia/releases/tag/v0.11.1-beta).
 :::
 
 ## What is Ambrosia?
@@ -63,7 +63,7 @@ This tutorial is organized into several sections:
 5. **Sell Your Product** - Sale
 6. **Close your Lightning channel** - Closing a channel
 
-Once you're up and running, the [Tutorials](./tutorials/index.md) cover each part of Ambrosia in depth.
+Once you're up and running, the [Tutorials](./tutorials/index.md) cover each part of Ambrosia in depth. If you install and maintain the computer that runs Ambrosia, the [Advanced](./advanced/index.md) guides cover deployment, maintenance and troubleshooting.
 
 ## Ready to Begin?
 

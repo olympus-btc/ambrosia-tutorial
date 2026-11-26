@@ -18,5 +18,9 @@
   "sidebar.tutorialSidebar.category.Tutorials": {
     "message": "Tutoriales",
     "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Advanced": {
+    "message": "Avanzado",
+    "description": "The label for category 'Advanced' in sidebar 'tutorialSidebar'"
   }
 }

@@ -17,6 +17,10 @@ Every sale is saved as an order. From **Orders** you can find a sale, see what w
 
 Click **Details** on an order. **Order details** shows the user, status, payment method, total, discount, tip and date, plus each product with its quantity, unit price and subtotal. Bitcoin orders also show the payment hash, and bank transfers the **Reference #**.
 
+If phoenixd kept a fee to expand your channel's capacity so it could receive the payment, the order also shows the **Lightning network fee**. It doesn't change what the customer paid.
+
+With a receipt printer set up (see [Store Settings](./store-settings.md#printers)), **Reprint receipt** prints the receipt of a paid or refunded order again.
+
 ## Refund an Order
 
 You can refund a paid order if your role has the **Refund orders** permission (see [Users and Roles](./users-and-roles.md)). A refund restores the products' stock and marks the order as refunded.
@@ -35,7 +39,7 @@ Enter the **Cash given to customer**. **Process refund** is enabled only when it
 
 ### Card and Bank Transfer
 
-Ambrosia only marks the order as refunded: return the money from your card payment platform or your bank first. Then check **I already processed this refund on my card payment platform** and process the refund.
+Ambrosia only marks the order as refunded: return the money first, from your card payment platform or from your bank. Then check **I already processed this refund on my card payment platform** for a card, or **I already sent this refund from my bank** for a bank transfer, and process the refund.
 
 :::info
 Cash refunds count in the shift's cash. When you close the shift, they're subtracted from the expected total (see [Shifts](./shifts.md)).

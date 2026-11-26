@@ -17,6 +17,10 @@ Cada venta se guarda como una orden. Desde la página de órdenes puedes encontr
 
 Haz clic en **Detalles** en una orden. **Detalles de la orden** muestra el usuario, el estado, el método de pago, el total, el descuento, la propina y la fecha, además de cada producto con su cantidad, precio unitario y subtotal. Las órdenes con Bitcoin también muestran el hash del pago, y las transferencias el **N.º de referencia**.
 
+Si phoenixd se quedó una comisión para ampliar la capacidad de tu canal y así poder recibir el pago, la orden también muestra la **Comisión de Lightning Network**. No cambia lo que pagó el cliente.
+
+Con una impresora de tickets configurada (consulta [Configuración de la Tienda](./store-settings.md#impresoras)), **Reimprimir ticket** vuelve a imprimir el ticket de una orden pagada o reembolsada.
+
 ## Reembolsar una Orden
 
 Puedes reembolsar una orden pagada si tu rol tiene el permiso **Reembolsar órdenes** (consulta [Usuarios y Roles](./users-and-roles.md)). El reembolso restaura el stock de los productos y marca la orden como reembolsada.
@@ -27,7 +31,7 @@ Puedes reembolsar una orden pagada si tu rol tiene el permiso **Reembolsar órde
 
 ### Bitcoin (Lightning)
 
-La ventana muestra el **Monto a reembolsar** en sats. Pídele al cliente una factura Lightning por exactamente ese monto, pégala en **Invoice Lightning del cliente** y procesa el reembolso. Ambrosia paga la factura desde tu wallet.
+La ventana muestra el **Monto a reembolsar** en sats. Pídele al cliente un invoice Lightning por exactamente ese monto, pégalo en **Invoice Lightning del cliente** y procesa el reembolso. Ambrosia paga el invoice desde tu billetera.
 
 ### Efectivo
 
@@ -35,7 +39,7 @@ Ingresa el **Efectivo entregado al cliente**. **Procesar reembolso** se habilita
 
 ### Tarjeta y Transferencia Bancaria
 
-Ambrosia solo marca la orden como reembolsada: primero devuelve el dinero desde tu plataforma de pagos con tarjeta o desde tu banco. Después marca **Ya procesé este reembolso en mi plataforma de pagos de tarjeta** y procesa el reembolso.
+Ambrosia solo marca la orden como reembolsada: primero devuelve el dinero, desde tu plataforma de pagos con tarjeta o desde tu banco. Después marca **Ya procesé este reembolso en mi plataforma de pagos de tarjeta** si fue con tarjeta, o **Ya envié este reembolso desde mi banco** si fue por transferencia, y procesa el reembolso.
 
 :::info
 Los reembolsos en efectivo cuentan en el efectivo del turno. Al cerrar el turno, se restan del total esperado (consulta [Turnos](./shifts.md)).
