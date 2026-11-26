@@ -13,7 +13,7 @@ La **Billetera** es donde ves el saldo de tu nodo Lightning, recibes y envías p
 2. En **Confirmar acceso a la billetera**, ingresa la contraseña de la billetera y haz clic en **Entrar**.
 
 :::info
-Si el cifrado de secretos está bloqueado, desbloquéalo primero en **Configuración** → **Cifrado de secretos**.
+Si el cifrado de secretos está bloqueado, desbloquéalo primero en **Configuración** → **Bitcoin y billetera** → **Cifrado de secretos** (consulta [Configuración de Lightning](./lightning-settings.md#cifrado-de-secretos)).
 :::
 
 ## Información del Nodo

@@ -17,22 +17,22 @@ Everything on the page follows the selected period.
 
 **Orders** is the tab that opens first. It looks at your sales order by order.
 
-- **Summary** shows **Total Revenue**, **Orders**, **Average Ticket** and **Average Items / Order**. If there were discounts or refunds in the period, it also shows **Total Discounts**, **Total Refunded** and **Net Revenue** (revenue minus refunds).
+- **Summary** shows **Total Revenue**, **Orders**, **Average Ticket** and **Average Items / Order**. If there were discounts, refunds or Lightning liquidity fees in the period, it also shows **Total Discounts**, **Total Refunded**, **Net Revenue** (revenue minus refunds) and **Total Lightning Liquidity Fees**.
 - **Analytics** shows the **Revenue Over Time**, **Orders Over Time** and **Top Users by Orders** charts.
-- The order list can be filtered with **Search**, by product, and with **Payment Method**. Click **Details** on an order to see its products, discount and total in **Order Detail**.
+- The order list can be filtered with **Search**, by product, and with **Payment Method**. Click **Details** on an order to see its products, discount, total and, if there was one, the **Lightning network fee** in **Order Detail**.
 
 ## Products Tab
 
 **Products** looks at your sales product by product.
 
-- **Summary** shows **Total Revenue**, **Items Sold**, **Product Lines** and **Unique Products**. If there were bitcoin payments or refunds, it also shows **Total Bitcoin**, **Total Refunded**, **Total Refunded (Bitcoin)** and **Net Revenue**.
+- **Summary** shows **Total Revenue**, **Items Sold**, **Product Lines** and **Unique Products**. If there were bitcoin payments, refunds or Lightning liquidity fees, it also shows **Total Bitcoin**, **Total Refunded**, **Total Refunded (Bitcoin)**, **Net Revenue** and **Total Lightning Liquidity Fees**.
 - **Analytics** shows the **Revenue Over Time**, **Top Products by Revenue** and **Payment Method Distribution** charts.
-- **Sales Detail** lists every product sold, and can be filtered with **Search** and **Payment Method** too.
+- **Sales Detail** lists every product sold, with the **Lightning network fee** of the sales that had one, and can be filtered with **Search** and **Payment Method** too.
 
 ## Shifts Tab
 
-The **Shifts** tab only appears if your role can see the shifts report, which admin roles can by default. It shows the shifts of the period and their cash differences; see [Review Past Shifts](./shifts.md#review-past-shifts).
+The **Shifts** tab only appears if your role has the **View shifts report** permission, which admin roles have by default. It shows the shifts of the period and their cash differences; see [Review Past Shifts](./shifts.md#review-past-shifts).
 
 ## Export to CSV
 
-The order list, **Sales Detail** and the shift list each have an **Export CSV** button. It downloads the list as a CSV file you can open in a spreadsheet.
+The order list, **Sales Detail** and the shift list each have an **Export CSV** button. It downloads the list as a CSV file you can open in a spreadsheet. The order list and **Sales Detail** exports include a column with the Lightning network fee.

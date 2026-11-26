@@ -13,7 +13,7 @@ The **Wallet** is where you see the balance of your Lightning node, receive and 
 2. In **Confirm Wallet Access**, enter your wallet password and click **Access**.
 
 :::info
-If secrets encryption is locked, unlock it first in **Settings** → **Secrets encryption**.
+If secrets encryption is locked, unlock it first in **Settings** → **Bitcoin & Wallet** → **Secrets encryption** (see [Lightning Settings](./lightning-settings.md#secrets-encryption)).
 :::
 
 ## Node Information
