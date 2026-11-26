@@ -26,6 +26,10 @@ Los menús y avisos de actualización de la app de escritorio solo están en ing
 Tus volúmenes necesitan una migración que se hace una sola vez, porque el contenedor `ambrosia` ahora corre con otro usuario. Sigue [Seguridad en Docker](../advanced/docker-hardening.md#migrar-tus-volúmenes) en lugar de estos comandos.
 :::
 
+:::info
+Desde 0.11.0-beta, Ambrosia se abre en **https://localhost** en lugar de `http://localhost:3000`, y Docker necesita los puertos 80 y 443 libres en esta computadora (consulta el paso 8 de la [guía de instalación con Docker](../quick-start-docker/installation.md)).
+:::
+
 Desde tu carpeta `ambrosia`, trae el código más reciente y reconstruye las imágenes:
 
 ```bash

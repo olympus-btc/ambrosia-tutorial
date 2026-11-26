@@ -24,6 +24,10 @@ The app checks for updates when it starts and every 6 hours. You can also check 
 Your volumes need a one-time migration, because the `ambrosia` container now runs with a different user. Follow [Docker Hardening](../advanced/docker-hardening.md#migrate-your-volumes) instead of these commands.
 :::
 
+:::info
+Starting with 0.11.0-beta, Ambrosia opens at **https://localhost** instead of `http://localhost:3000`, and Docker needs ports 80 and 443 free on this computer (see step 8 of the [Docker installation guide](../quick-start-docker/installation.md)).
+:::
+
 From your `ambrosia` folder, get the latest code and rebuild the images:
 
 ```bash
