@@ -17,7 +17,7 @@ El backend se elige en el paso 4 de la configuración inicial:
 | --- | --- |
 | **phoenixd** (local) | El nodo phoenixd instalado con Ambrosia, en la misma computadora. |
 | **Nodo phoenixd remoto** | Un nodo phoenixd que corre en otra computadora, por ejemplo uno al que llegas por Tailscale. |
-| **Nostr Wallet Connect** | Cualquier wallet compatible con NWC, como Alby Hub. Ambrosia no corre un nodo. |
+| **Nostr Wallet Connect** | Cualquier billetera compatible con NWC, como Alby Hub. Ambrosia no corre un nodo. |
 
 Si la conexión con un nodo phoenixd remoto o con una billetera NWC falla durante la configuración, tienes que repetir la configuración inicial para volver a intentarlo.
 
@@ -41,18 +41,19 @@ Si tu billetera NWC deja de funcionar con Ambrosia, ve a **Configuración** → 
 
 ## Cifrado de Secretos
 
-Ambrosia guarda la contraseña de phoenixd, la conexión NWC y la clave de las notificaciones push. El **Cifrado de secretos** los protege con una **Contraseña de desbloqueo** que solo tú conoces.
+Ambrosia guarda la contraseña de phoenixd, la conexión NWC y la clave de las notificaciones push. El **Cifrado de secretos** los protege con la contraseña de la billetera.
 
 Para activarlo, marca la opción de cifrado en el paso 5 de la configuración, o después:
 
 1. Ve a **Configuración** → **Bitcoin y billetera** → **Cifrado de secretos** y haz clic en **Administrar cifrado**.
-2. Ingresa una **Contraseña de desbloqueo** y haz clic en **Activar cifrado**.
+2. Ingresa la **Contraseña de la billetera** y haz clic en **Entrar**.
+3. Haz clic en **Activar cifrado**.
 
-Anota la contraseña de desbloqueo en un lugar seguro: no se puede recuperar, y tampoco los secretos que protege.
+Si alguna vez pierdes la contraseña de la billetera, no hay forma de recuperar estos secretos.
 
-Cuando el servidor de Ambrosia se reinicia, los secretos se vuelven a bloquear hasta que alguien ingresa la contraseña de desbloqueo. Mientras están bloqueados, al elegir BTC en el cobro el botón de pago cambia a **Desbloquear**, que pide la contraseña de desbloqueo. También puedes desbloquearlos antes: ve a **Configuración** → **Bitcoin y billetera** → **Cifrado de secretos**, haz clic en **Administrar cifrado**, ingresa la **Contraseña de desbloqueo** y haz clic en **Desbloquear**.
+Cuando el servidor de Ambrosia se reinicia, los secretos se vuelven a bloquear hasta que alguien ingresa la contraseña de la billetera. Mientras están bloqueados, al elegir **Bitcoin (Lightning)** en el cobro el botón de pago cambia a **Desbloquear**, que te la pide. También puedes desbloquearlos antes: ve a **Configuración** → **Bitcoin y billetera** → **Cifrado de secretos**, haz clic en **Administrar cifrado**, ingresa la **Contraseña de la billetera** y haz clic en **Entrar**; después escríbela otra vez en **Contraseña de desbloqueo** y haz clic en **Desbloquear**.
 
-En la Desktop App, marca **Recordar en este dispositivo** para guardar la contraseña de desbloqueo en el keyring de tu sistema, así Ambrosia desbloquea los secretos solo al iniciar.
+En la Desktop App, marca **Recordar en este dispositivo** antes de hacer clic en **Activar cifrado** para guardar la contraseña de la billetera en el keyring de tu sistema, así Ambrosia desbloquea los secretos solo al iniciar.
 
 ## Auto Liquidez (Desktop App)
 
@@ -65,6 +66,6 @@ Auto Liquidez no está disponible con Nostr Wallet Connect.
 Algunos cambios, como volver al nodo phoenixd local, necesitan un reinicio. En Docker, y en Native con los servicios de systemd, ve a **Configuración** → **Sistema**:
 
 - **Reiniciar servidor** reinicia el servidor de Ambrosia. Las sesiones abiertas se interrumpen brevemente.
-- **Reiniciar phoenixd** reinicia el nodo Lightning local. Solo aparece cuando Ambrosia usa su phoenixd local.
+- **Reiniciar phoenixd** reinicia el nodo Lightning local. Solo aparece en Native, cuando Ambrosia usa su phoenixd local. En Docker, ejecuta `docker restart phoenixd`.
 
 Haz clic en el botón y luego en **Reiniciar** para confirmar. Si la tarjeta dice **El reinicio no está disponible para esta instalación**, reinicia Ambrosia tú: cierra y vuelve a abrir la Desktop App, o detén e inicia el servidor en una instalación Native sin servicios.
